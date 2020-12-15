@@ -1,0 +1,24 @@
+:root{
+    /* Dark Theme */
+    --bg-color:             #141518;
+
+    --primary-color:        #FF5722;
+    --primary-color2:       #f78c65;
+
+    --surface-color1:       #191D22;
+    --surface-color2:       #1E262E;
+    --surface-color3:       #26323E;
+
+    --error-color:          #CF6679;
+
+    --onsurface-color:      #FFFFFFdd;
+    --onsurface-color2:     #FFFFFF99;
+    --onsurface-color3:     #FFFFFF60;
+
+    --onprimary-color:      #000000dd;
+    --onprimary-color2:     #00000099;
+    --onprimary-color3:     #00000060;
+
+    --secondary-color:      #22cbff;
+    --secondary-color2:     #74dafe;
+}
