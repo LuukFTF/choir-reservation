@@ -43,8 +43,11 @@ a {
     text-decoration: none;
 }
 
-.container {
+.webcontainer {
     max-width: 1100px;
+}
+
+.container {
     margin: 0 auto;
     overflow: auto;
     padding: 0 auto;
@@ -70,24 +73,31 @@ a {
 .bottom-btn {
     padding: 0;
     background: var(--surface-color3);
-    color: var(--primary-color);
+    color: var(--onsurface-color2);
     max-height: 100%;
     border-radius: 0;
+    padding: 20px 10px;
+    min-width: 50px;
+    text-align: center;
+}
 
-    padding: 30px;
-    
+.active.bottom-btn {
+    color: var(--primary-color);
 }
 
 .bottom-btn:hover {
     background-color: var(--surface-color2);
+    color: var(--primary-color2);
 }
 
 .bottomnavbar {
     position:fixed;
     bottom:0;
     width:100%;
-    height: 90px;
-    padding: 0 0;
+    padding: 0;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    background: var(--surface-color3);
+
 }
 
 .nav {
