@@ -22,3 +22,79 @@
     --secondary-color:      #22cbff;
     --secondary-color2:     #74dafe;
 }
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    color: var(--onsurface-color);
+    background-color: var(--bg-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+  
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 auto;
+ }
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+  
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    cursor: pointer;
+    background: var(--primary-color);
+    color: var(--onprimary-color);
+    border: none;
+    border-radius: 5px;
+}
+
+.bottom-btn {
+    padding: 0;
+    background: var(--surface-color3);
+    color: var(--primary-color);
+    max-height: 100%;
+    border-radius: 0;
+
+    padding: 30px;
+    
+}
+
+.bottom-btn:hover {
+    background-color: var(--surface-color2);
+}
+
+.bottomnavbar {
+    position:fixed;
+    bottom:0;
+    width:100%;
+    height: 90px;
+    padding: 0 0;
+}
+
+.nav {
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+img {
+    width: 100%;
+  }
