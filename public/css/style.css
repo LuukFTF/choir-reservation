@@ -51,7 +51,7 @@ a {
     margin: 0 auto;
     overflow: auto;
     padding: 0 auto;
- }
+}
 
 .flex {
     display: flex;
@@ -70,7 +70,7 @@ a {
     border-radius: 5px;
 }
 
-.bottom-btn {
+.nav-btn {
     padding: 0;
     background: var(--surface-color3);
     color: var(--onsurface-color2);
@@ -81,11 +81,11 @@ a {
     text-align: center;
 }
 
-.active.bottom-btn {
+.active.nav-btn {
     color: var(--primary-color);
 }
 
-.bottom-btn:hover {
+.nav-btn:hover {
     background-color: var(--surface-color2);
     color: var(--primary-color2);
 }

@@ -19,10 +19,10 @@
 
     <section class="bottomnavbar">
             <nav class="container flex nav">
-                <a href="../main" class="btn bottom-btn">Home</a>
-                <a href="../events" class="btn bottom-btn active">Events</a>
-                <a class="btn bottom-btn">Inbox</a>
-                <a class="btn bottom-btn">Settings</a>
+                <a href="../main" class="btn nav-btn">Home</a>
+                <a href="../events" class="btn nav-btn active">Events</a>
+                <a class="btn nav-btn">Inbox</a>
+                <a class="btn nav-btn">Settings</a>
             </nav>
         </div>
     </section>
