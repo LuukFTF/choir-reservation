@@ -243,8 +243,9 @@ a .fab-btn {
  
 
 .topbar .title {
+    color: var(--onsurface-color);
     font-size: 2.8em;
-    font-weight: 700;
+    font-weight: 500;
     margin: 0;
     padding: 0;
 }
@@ -429,6 +430,7 @@ table .btn:active {
 }
 
 .callist-left .day {
+    color: var(--onsurface-color2);
     font-variant: small-caps;
     font-weight: 300;
     font-size: 1.7em;
@@ -437,6 +439,7 @@ table .btn:active {
 }
 
 .callist-left .dayofmonth {
+    color: var(--onsurface-color);
     font-size: 3em;
     font-weight: 700;
     margin: 0;
@@ -455,6 +458,7 @@ table .btn:active {
 }
 
 .callist-right .title {
+    color: var(--onsurface-color);
     font-size: 1.7em;
     font-weight: 500;    
     margin: 0;
@@ -462,6 +466,7 @@ table .btn:active {
 }
 
 .callist-right .time {
+    color: var(--onsurface-color2);
     margin: 0;
     padding: 0;
 }
