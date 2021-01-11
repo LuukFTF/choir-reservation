@@ -18,18 +18,31 @@
         </section>
 
         <section class="calendar-list callist-default">
-            <div class="callist container">
-                <div class="calllist item">
-                    <div class="callist-left">
-                        <div class="day">Thu</div>
+            <div class="callist container flex">
+                <div class="calllist-item flex-item container flex">
+                    <div class="callist-left flex-item">
+                        <div class="day">thu</div>
                         <div class="dayofmonth">1</div>
                     </div>
-                    <div class="callist-right">
-                        <div class="title"></div>
-                        <div class="time">19:00-23:15</div>
+                    <div class="callist-right item">
+                        <div class="title">Voorbereiding</div>
+                        <div class="time">19:00 - 23:15</div>
+                    </div>
+                </div>
+                <div class="calllist-item flex-item container flex">
+                    <div class="callist-left flex-item">
+                        <div class="day">fri</div>
+                        <div class="dayofmonth">8</div>
+                    </div>
+                    <div class="callist-right item">
+                        <div class="title">Show</div>
+                        <div class="time">13:00 - 18:00</div>
                     </div>
                 </div>
             </div>
+
+            
+
         </section>
         <a class="btn fab-btn"><div class="fab-btn btn-content btn-add"></div></a>
     </div>

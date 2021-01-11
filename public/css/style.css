@@ -55,7 +55,7 @@ body {
     background: var(--bg-color);
     color: var(--onsurface-color);
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
 .container {
@@ -75,14 +75,8 @@ body {
 }
 
 .flexitem {
-    background-color: var(--surface-color1);
-
     padding: 20px;
     margin: 10px;
-
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-
 }
 
 .webcontainer {
@@ -209,7 +203,7 @@ a .fab-btn {
     text-align: center;
     font-size: 2em;
 
-    padding: 12.5px;
+    padding: 9px;
 }
 
 
@@ -227,11 +221,11 @@ a .fab-btn {
 /* ## Topbar */
 
 .topbar {
-    background: red;
+    background: var(--surface-color3);
 }
 
 .topbar .title {
-    background: blue;
+
 }
 
 
@@ -368,7 +362,74 @@ table .btn:active {
 
 
 
+
 /* # Sections */
+
+/* ## Calendarlist */
+
+.calendar-list {
+    flex-direction: column;
+    margin: 10px 20px;
+}
+
+.callist .container.flex {
+    flex-direction: row;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.calllist-item .container .flex {
+    flex-direction: column;
+
+}
+
+
+.callist-left {
+    width: 20%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.callist-left .day {
+    font-variant: small-caps;
+    font-weight: 300;
+    font-size: 1.7em;
+    margin: 0;
+    padding: 0;
+}
+
+.callist-left .dayofmonth {
+    font-size: 3em;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+
+.callist-right {
+    background: var(--surface-color2);
+    width: 80%;
+    margin: 0;
+    padding: 20px;
+
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.callist-right .title {
+    font-size: 1.7em;
+    font-weight: 500;    
+    margin: 0;
+    padding: 0;
+}
+
+.callist-right .time {
+    margin: 0;
+    padding: 0;
+}
+
+
 
 /* ## Generaldetails Section */
 
