@@ -17,8 +17,8 @@
         </section>
     </div>
 
-    <section class="bottomnavbar">
-            <nav class="container flex nav">
+    <section class="bottomnavbarcontainer">
+            <nav class="bottomnavbar container flex nav">
                 <a href="../main" class="btn nav-btn active">Home</a>
                 <a href="../events" class="btn nav-btn">Events</a>
                 <a class="btn nav-btn">Inbox</a>
