@@ -216,6 +216,12 @@ a .btn {
     color: var(--primary-color2);
 }
 
+@media (min-width:600px) { 
+    .nav-btn {
+        padding: 20px 30px;   
+    }
+}
+
 
 /* ## Bottomnavbar */
 
@@ -236,16 +242,15 @@ a .btn {
     padding: 0px 20px;
 }
 
+.nav {
+    flex-direction: row;
+    align-items: flex-end;
+}
 
 @media (min-width:600px) { 
     .bottomnavbar {
         max-width: min-content;
     }
-}
-
-.nav {
-    flex-direction: row;
-    align-items: flex-end;
 }
 
 /* ## Forms */
