@@ -164,6 +164,8 @@ img {
     width: 100%;
 }
 
+
+
 /* ## Buttons */
 
 .btn, 
@@ -191,6 +193,14 @@ a .btn {
 }
 
 
+.btn-options::before {
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f142";
+}
+
+.btn-add::before {
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f067";
+}
+
 /* ### Navbuttons */
 
 .nav-btn {
@@ -216,6 +226,7 @@ a .btn {
     color: var(--primary-color2);
 }
 
+
 @media (min-width:600px) { 
     .nav-btn {
         padding: 20px 30px;   
@@ -223,9 +234,10 @@ a .btn {
 }
 
 
+
 /* ## Bottomnavbar */
 
-.bottomnavbarcontainer {
+.bottomnavbar-container {
 
     position: fixed;
 
@@ -252,6 +264,18 @@ a .btn {
         max-width: min-content;
     }
 }
+
+/* ## Topbar */
+
+.topbar {
+    background: red;
+}
+
+.topbar .title {
+    background: blue;
+}
+
+
 
 /* ## Forms */
 
@@ -313,11 +337,13 @@ table .btn:active {
     box-shadow: 0 3px 13px rgba(114, 81, 81, 0.2);
 }
 
+
 /* ## Errors */
 
 .errors {
     color: var(--error-color);
 }
+
 
 
 /* # Sections */

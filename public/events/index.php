@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,
     initial-schale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/0bc22cc72a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/utilities.css">
     <title>1. Homepage</title>
@@ -12,12 +12,29 @@
 <body>
 
     <div class="webcontainer">
-        <section class="main">
-            
+        <section class="topbar">
+            <div class="title"> Month </div> 
+            <a class="btn topbar-btn btn-options"></a>
         </section>
+
+        <section class="calendar-list callist-default">
+            <div class="callist container">
+                <div class="calllist item">
+                    <div class="callist-left">
+                        <div class="day">Thu</div>
+                        <div class="dayofmonth">1</div>
+                    </div>
+                    <div class="callist-right">
+                        <div class="title">Repetitie</div>
+                        <div class="time">19:00-23:15</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <a class="btn fab-btn btn-add "></a>
     </div>
 
-    <section class="bottomnavbarcontainer">
+    <section class="bottomnavbar-container">
             <nav class="bottomnavbar container flex nav">
                 <a href="../main" class="btn nav-btn">Home</a>
                 <a href="../events" class="btn nav-btn active">Events</a>
