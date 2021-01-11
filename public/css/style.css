@@ -1,5 +1,7 @@
 :root{
-    /* Dark Theme */
+    /* # Color Themes */
+
+    /* ## Dark Theme */
     --bg-color:             #141518;
 
     --primary-color:        #FF5722;
@@ -11,74 +13,197 @@
 
     --error-color:          #CF6679;
 
+    --secondary-color:      #22cbff;
+    --secondary-color2:     #74dafe;
+
+    /* ### Oncolors */
+
+    --onprimary-color:      #000000dd;
+    --onprimary-color2:     #0a0a0a99;
+    --onprimary-color3:     #00000060;
+
     --onsurface-color:      #FFFFFFdd;
     --onsurface-color2:     #FFFFFF99;
     --onsurface-color3:     #FFFFFF60;
 
-    --onprimary-color:      #000000dd;
-    --onprimary-color2:     #00000099;
-    --onprimary-color3:     #00000060;
+    --onerror-color:        #000000dd;
 
-    --secondary-color:      #22cbff;
-    --secondary-color2:     #74dafe;
+    /* ## Light Theme */
+
+
+    /* ## backup */
+    --bg-color-black:       #121212;
+
+    --surface-color1-black: #1B1B1B;
+    --surface-color2-black: #252525;
+    --surface-color3-black: #343434;
+
+    --surface-color-minalpha:#6a9ed30a;
 }
 
+/* # Utilities */
+
+/* ## General */
+
 * {
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
-
 body {
+    background: var(--bg-color);
     color: var(--onsurface-color);
-    background-color: var(--bg-color);
+
     font-family: Arial, Helvetica, sans-serif;
 }
 
-ul {
-    list-style-type: none;
+.container {
+    margin: 0 auto;
+    padding: 0 auto;
+
+    overflow: auto;
 }
-  
-a {
-    text-decoration: none;
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+}
+
+.flexitem {
+    background-color: var(--surface-color1);
+
+    padding: 20px;
+    margin: 10px;
+
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+
 }
 
 .webcontainer {
     max-width: 1100px;
 }
 
-.container {
-    margin: 0 auto;
-    overflow: auto;
-    padding: 0 auto;
+/* ## Content */
+
+h1 {
+    color: var(--primary-color);
+
+    margin: 0.7em 0;
+
+    font-size: 2.5em;
+    font-weight: 800;
 }
 
-.flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+h2 {
+    color: var(--onsurface-color);
+
+    margin: 0.7em 0;
+
+    font-size: 2em;
+    font-weight: 700;
 }
-  
-.btn {
-    display: inline-block;
-    padding: 10px 30px;
-    cursor: pointer;
+
+h3 {
+    color: var(--onsurface-color);
+
+    margin: 0.8em 0;
+
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+h4 {
+    color: var(--onsurface-color);
+
+    margin: 1em 0;
+
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+h5 {
+    color: var(--onsurface-color);
+
+    margin: 1em 0;
+
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+h6 {
+    color: var(--onsurface-color);
+
+    margin: 1em 0;
+
+    font-size: 1.1em;
+    font-weight: 700;
+}
+
+p {
+    margin: 1em 0;
+}
+
+a {
+    color: var(--secondary-color);
+
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    width: 100%;
+}
+
+/* ## Buttons */
+
+.btn, 
+a .btn {
     background: var(--primary-color);
     color: var(--onprimary-color);
+
+    display: inline-block;
+    
+    padding: 10px 30px;
     border: none;
     border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+
+    text-decoration: none;
+
+    cursor: pointer;
 }
 
+.btn:hover, 
+.btn:active {
+    background: var(--primary-color2);
+
+    box-shadow: 0 3px 13px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ### Navbuttons */
+
 .nav-btn {
-    padding: 0;
     background: var(--surface-color3);
     color: var(--onsurface-color2);
+
+    min-width: 50px;
     max-height: 100%;
     border-radius: 0;
     padding: 20px 10px;
-    min-width: 50px;
+
     text-align: center;
+
+    box-shadow: 0 0;
 }
 
 .active.nav-btn {
@@ -86,18 +211,22 @@ a {
 }
 
 .nav-btn:hover {
-    background-color: var(--surface-color2);
+    background: var(--surface-color2);
     color: var(--primary-color2);
 }
 
+
+/* ## Bottomnavbar */
+
 .bottomnavbar {
-    position:fixed;
-    bottom:0;
-    width:100%;
-    padding: 0;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     background: var(--surface-color3);
 
+    position: fixed;
+
+    bottom: 0;
+    width: 100%;
+    padding: 0;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 .nav {
@@ -105,6 +234,132 @@ a {
     align-items: flex-end;
 }
 
-img {
-    width: 100%;
+/* ## Forms */
+
+label {
+    color: var(--onsurface-color3);
+
+    display: block;
+
+    margin: 0 0 5px 0;
+
+    font-variant: small-caps;
+}
+
+input {
+    background: var(--surface-color2);
+    color: var(--onsurface-color2);
+
+    padding: 8px 8px;
+    border:2px solid var(--surface-color2);
+    border-radius: 5px;
+    outline: none;
+
+    font-size: 1em;
+}
+
+input[type="text"]:focus, input[type="text"]:hover {
+    color: var(--onsurface-color);
+
+    border:2px solid var(--primary-color);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ## Table */
+
+td {
+    padding: 5px 15px;
+}
+
+tfoot td {
+    text-align: center;
+    font-weight: 700;
+}
+
+tbody tr:nth-child(odd) {
+    background: var(--surface-color2);
+}
+
+table .btn {
+    background: var(--surface-color3);
+    color: var(--onsurface-color2);
+
+    padding: 5px 10px;
+}
+
+table .btn:hover, 
+table .btn:active {
+    background: var(--onsurface-color3);
+
+    box-shadow: 0 3px 13px rgba(114, 81, 81, 0.2);
+}
+
+/* ## Errors */
+
+.errors {
+    color: var(--error-color);
+}
+
+
+/* # Sections */
+
+/* ## Generaldetails Section */
+
+.generaldetails .item  {
+    margin: 20px 0;
+    padding: 0;
+}
+
+
+.generaldetails h4  {
+    color: var(--onsurface-color);
+
+    margin: 0;
+    padding: 0;
+}
+
+.generaldetails p  {
+    color: var(--onsurface-color2);
+
+    padding: 0;
+    margin: 0;
+
+    font-variant: small-caps;
+}
+
+
+/* ## Generalcreate Section */
+
+.generalcreate .datafield-item {
+    margin: 20px 0;
+}
+
+.generalcreate p  {
+    color: var(--onsurface-color2);
+
+    padding: 0;
+    margin: 0;
+
+    font-variant: small-caps;
+}
+
+
+/* # Template */
+
+.template {
+    /* color */
+
+    /* position */
+
+    /* display */
+
+    /* box model */
+
+    /* box attributes*/
+
+    /* text */
+
+    /* other */
+
+    /* animation */
 }
