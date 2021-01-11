@@ -192,6 +192,27 @@ a .btn {
     box-shadow: 0 3px 13px rgba(0, 0, 0, 0.2);
 }
 
+.fab-btn, 
+a .fab-btn {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    margin: 20px;
+    border-radius: 40px;
+    position: fixed;
+
+    bottom: 60px;
+    right: 0;
+}
+
+.fab-btn .btn-content {
+    text-align: center;
+    font-size: 2em;
+
+    padding: 12.5px;
+}
+
+
 
 .btn-options::before {
     font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f142";
@@ -201,36 +222,16 @@ a .btn {
     font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f067";
 }
 
-/* ### Navbuttons */
 
-.nav-btn {
-    background: var(--surface-color3);
-    color: var(--onsurface-color2);
 
-    min-width: 50px;
-    max-height: 100%;
-    border-radius: 0;
-    padding: 20px 10px;
+/* ## Topbar */
 
-    text-align: center;
-
-    box-shadow: 0 0;
+.topbar {
+    background: red;
 }
 
-.active.nav-btn {
-    color: var(--primary-color);
-}
-
-.nav-btn:hover {
-    background: var(--surface-color2);
-    color: var(--primary-color2);
-}
-
-
-@media (min-width:600px) { 
-    .nav-btn {
-        padding: 20px 30px;   
-    }
+.topbar .title {
+    background: blue;
 }
 
 
@@ -265,16 +266,37 @@ a .btn {
     }
 }
 
-/* ## Topbar */
+/* ### Navbuttons */
 
-.topbar {
-    background: red;
+.nav-btn {
+    background: var(--surface-color3);
+    color: var(--onsurface-color2);
+
+    min-width: 50px;
+    max-height: 100%;
+    border-radius: 0;
+    padding: 20px 10px;
+
+    text-align: center;
+
+    box-shadow: 0 0;
 }
 
-.topbar .title {
-    background: blue;
+.active.nav-btn {
+    color: var(--primary-color);
 }
 
+.nav-btn:hover {
+    background: var(--surface-color2);
+    color: var(--primary-color2);
+}
+
+
+@media (min-width:600px) { 
+    .nav-btn {
+        padding: 20px 30px;   
+    }
+}
 
 
 /* ## Forms */

@@ -25,13 +25,13 @@
                         <div class="dayofmonth">1</div>
                     </div>
                     <div class="callist-right">
-                        <div class="title">Repetitie</div>
+                        <div class="title"></div>
                         <div class="time">19:00-23:15</div>
                     </div>
                 </div>
             </div>
         </section>
-        <a class="btn fab-btn btn-add "></a>
+        <a class="btn fab-btn"><div class="fab-btn btn-content btn-add"></div></a>
     </div>
 
     <section class="bottomnavbar-container">
