@@ -80,6 +80,7 @@ body {
 }
 
 .webcontainer {
+
     max-width: 1100px;
 }
 
@@ -220,12 +221,46 @@ a .fab-btn {
 
 /* ## Topbar */
 
-.topbar {
-    background: var(--surface-color3);
+.topbar-container {
+    position: fixed;
+
+    z-index: 2;
+
+    top: 0;
+    width: 100%;
+    padding: 0;
+    height: 90px;
 }
 
-.topbar .title {
+.topbar {
+    background: var(--surface-color3);
+    flex-direction: row;
+    width: 100%;
+    margin: 0;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+ 
 
+.topbar .title {
+    font-size: 2.8em;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+.topbar .btn {
+    background: var(--surface-color3);
+    color: var(--onsurface-color1);
+
+    font-size: 2.2em;
+
+    border-radius: 0;
+    padding: 20px 10px;
+
+    text-align: center;
+
+    box-shadow: 0 0;
 }
 
 
@@ -233,7 +268,6 @@ a .fab-btn {
 /* ## Bottomnavbar */
 
 .bottomnavbar-container {
-
     position: fixed;
 
     bottom: 0;
@@ -368,6 +402,9 @@ table .btn:active {
 /* ## Calendarlist */
 
 .calendar-list {
+    top: 90px;
+    position: relative;
+
     flex-direction: column;
     margin: 10px 20px;
 }
@@ -375,7 +412,7 @@ table .btn:active {
 .callist .container.flex {
     flex-direction: row;
     width: 100%;
-    margin: 10px 0;
+    margin: 20px 0;
 }
 
 .calllist-item .container .flex {
