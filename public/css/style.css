@@ -196,7 +196,7 @@ a .fab-btn {
     border-radius: 40px;
     position: fixed;
 
-    bottom: 60px;
+    bottom: 90px;
     right: 0;
 }
 
@@ -238,6 +238,10 @@ a .fab-btn {
     font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f013";
 }
 
+.btn-back::before {
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f053";
+}
+
 /* ### Navbuttons */
 
 .nav-btn {
@@ -247,7 +251,7 @@ a .fab-btn {
     min-width: 50px;
     max-height: 100%;
     border-radius: 0;
-    padding: 15px 0;
+    padding: 8px 0 12px;
 
     text-align: center;
     font-size: 2em;
@@ -289,13 +293,22 @@ a .fab-btn {
 
 .topbar {
     background: var(--surface-color3);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     flex-direction: row;
     width: 100%;
     margin: 0;
     justify-content: space-between;
+    padding: 0;
+}
+
+.topbar.inv {
+    background: var(--bg-color);
     padding: 0 0 0 5%;
 }
- 
+
+.topbar.details {
+    justify-content: flex-start;
+}
 
 .topbar .title {
     color: var(--onsurface-color);
@@ -305,8 +318,24 @@ a .fab-btn {
     padding: 0;
 }
 
+.topbar .titlesmall {
+    color: var(--onsurface-color);
+    font-size: 2em;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+.topbar .titledesc {
+    color: var(--onsurface-color2);
+    font-size: 1.2em;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
 .topbar .btn {
-    background: var(--surface-color3);
+    background: 0;
     color: var(--onsurface-color1);
 
     font-size: 2.2em;
@@ -319,6 +348,10 @@ a .fab-btn {
     box-shadow: 0 0;
 }
 
+.topbar .btn.right {
+    position: absolute;
+    right: 0;
+}
 
 
 /* ## Bottomnavbar */
@@ -342,8 +375,6 @@ a .fab-btn {
 .nav {
     flex-direction: row;
     align-items: flex-end;
-    /* justify-content: space-evenly; */
-
 }
 
 @media (min-width:600px) { 

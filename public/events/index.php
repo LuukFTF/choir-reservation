@@ -7,13 +7,13 @@
     <script src="https://kit.fontawesome.com/0bc22cc72a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/utilities.css">
-    <title>1. Homepage</title>
+    <title>2. Events</title>
 </head>
 <body>
 
     <div class="webcontainer">
         <section class="topbar-container">
-            <div class="topbar container flex">
+            <div class="topbar inv container flex">
                 <div class="title flex-item"> January </div> 
                 <a class="btn topbar-btn btn-options flex-item"></a>
             </div>
@@ -26,10 +26,10 @@
                         <div class="day">thu</div>
                         <div class="dayofmonth">1</div>
                     </div>
-                    <div class="callist-right item">
+                    <a class="callist-right item" href="eventitem">
                         <div class="title">Item 1</div>
                         <div class="time">19:00 - 23:15</div>
-                    </div>
+                    </a>
                 </div>
 
                 <div class="calllist-item flex-item container flex">
