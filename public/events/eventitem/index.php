@@ -23,7 +23,37 @@
                 </div>
             </section>
 
-            <section class="main">
+            <section class="calendardetails">
+                <div class="detail-field">
+
+                </div>
+                <section class="presence">
+                    <div classs="presence-info">
+                        <div class="presence-title">
+                            Presence
+                        </div>
+                        <div class="presence-subtitle">
+                            10/50
+                        </div>
+                        <div class="presence-timeslot">
+                            <div class="timeslot-title">Closes</div>
+                            <div class="timeslot-time">20:00</div>
+                        </div>
+                    </div>
+                    <div class="presence-main">
+                        <div class="presence-form">
+                            <div class="checkbox">Absent</div>
+                            <div class="checkbox">Present</div>
+                            <div class="checkbox">Unsure</div>
+                        </div>
+                    </div>
+                </section>
+                <div class="detail2-field">
+
+                </div>
+            </section>
+
+            <section class="subcalendar">
 
             </section>
 
