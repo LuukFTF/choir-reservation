@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/css/utilities.css">
     <title>2.1 Event Item</title>
 </head>
-<body>
+<body class="expanded">
 
     <div class="webcontainer">
             <section class="topbar-container">
@@ -25,31 +25,36 @@
 
             <section class="calendardetails">
                 <div class="detail-field">
-
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
                 </div>
-                <section class="presence">
-                    <div classs="presence-info">
-                        <div class="presence-title">
-                            Presence
-                        </div>
-                        <div class="presence-subtitle">
-                            10/50
-                        </div>
-                        <div class="presence-timeslot">
+                <section class="presence container flex">
+                    <div class="presence-info flex-item container flex">
+                        <div class="presence-titlesub flex-item container flex"> 
+                            <div class="presence-title flex-item">
+                                Presence
+                            </div>
+                            <div class="presence-subtitle flex-item">
+                                10/50
+                            </div>
+                            </div>
+                        <div class="presence-timeslot flex-item">
                             <div class="timeslot-title">Closes</div>
                             <div class="timeslot-time">20:00</div>
                         </div>
                     </div>
                     <div class="presence-main">
-                        <div class="presence-form">
-                            <div class="checkbox">Absent</div>
-                            <div class="checkbox">Present</div>
-                            <div class="checkbox">Unsure</div>
+                        <div class="presence-form container flex">
+                            <div class="checkbox flex-item">Absent</div>
+                            <div class="checkbox flex-item">Present</div>
+                            <div class="checkbox flex-item">Unsure</div>
                         </div>
                     </div>
                 </section>
                 <div class="detail2-field">
-
+                    <div class="title">Foo</div>
+                    <div class="text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+                    </div>
                 </div>
             </section>
 
