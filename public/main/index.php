@@ -18,13 +18,12 @@
     </div>
 
     <section class="bottomnavbar-container">
-            <nav class="bottomnavbar container flex nav">
-                <a href="../main" class="btn nav-btn active">Home</a>
-                <a href="../events" class="btn nav-btn">Events</a>
-                <a class="btn nav-btn">Inbox</a>
-                <a class="btn nav-btn">Settings</a>
-            </nav>
-        </div>
+        <nav class="bottomnavbar container flex nav">
+            <a href="../main" class="btn nav-btn btn-home active"><br><div class="btn-text">Home</div></a>
+            <a href="../events" class="btn nav-btn btn-event"><br><div class="btn-text">Events</div></a>
+            <a class="btn nav-btn btn-inbox"><br><div class="btn-text">Inbox</div></a>
+            <a class="btn nav-btn btn-settings"><br><div class="btn-text">Settings</div></a>
+        </nav>
     </section>
 </body>
 </html>

@@ -207,6 +207,11 @@ a .fab-btn {
     padding: 9px;
 }
 
+.btn-text {
+    font-size: 0.5em;
+}
+
+/* ### Icons */
 
 
 .btn-options::before {
@@ -215,6 +220,56 @@ a .fab-btn {
 
 .btn-add::before {
     font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f067";
+}
+
+.btn-home::before {
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f015";
+}
+
+.btn-event::before {
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f133";
+}
+
+.btn-inbox::before {
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f01c";
+}
+
+.btn-settings::before {
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f013";
+}
+
+/* ### Navbuttons */
+
+.nav-btn {
+    background: var(--surface-color3);
+    color: var(--onsurface-color2);
+
+    min-width: 50px;
+    max-height: 100%;
+    border-radius: 0;
+    padding: 15px 0;
+
+    text-align: center;
+    font-size: 2em;
+
+    box-shadow: 0 0;
+    flex-grow: 1;
+}
+
+.active.nav-btn {
+    color: var(--primary-color);
+}
+
+.nav-btn:hover {
+    background: var(--surface-color2);
+    color: var(--primary-color2);
+}
+
+
+@media (min-width:600px) { 
+    .nav-btn {
+        padding: 20px 30px;   
+    }
 }
 
 
@@ -238,7 +293,7 @@ a .fab-btn {
     width: 100%;
     margin: 0;
     justify-content: space-between;
-    padding: 0 5%;
+    padding: 0 0 0 5%;
 }
  
 
@@ -257,7 +312,7 @@ a .fab-btn {
     font-size: 2.2em;
 
     border-radius: 0;
-    padding: 20px 10px;
+    padding: 20px 30px;
 
     text-align: center;
 
@@ -281,51 +336,23 @@ a .fab-btn {
     background: var(--surface-color3);
 
     max-width: 100%;
-    padding: 0px 20px;
+    padding: 0px 0px;
 }
 
 .nav {
     flex-direction: row;
     align-items: flex-end;
+    /* justify-content: space-evenly; */
+
 }
 
 @media (min-width:600px) { 
     .bottomnavbar {
         max-width: min-content;
+        padding: 0px 30px;
     }
 }
 
-/* ### Navbuttons */
-
-.nav-btn {
-    background: var(--surface-color3);
-    color: var(--onsurface-color2);
-
-    min-width: 50px;
-    max-height: 100%;
-    border-radius: 0;
-    padding: 20px 10px;
-
-    text-align: center;
-
-    box-shadow: 0 0;
-}
-
-.active.nav-btn {
-    color: var(--primary-color);
-}
-
-.nav-btn:hover {
-    background: var(--surface-color2);
-    color: var(--primary-color2);
-}
-
-
-@media (min-width:600px) { 
-    .nav-btn {
-        padding: 20px 30px;   
-    }
-}
 
 
 /* ## Forms */
