@@ -43,14 +43,6 @@
                         </div>
                     </div>
                     <div class="presence-main">
-                        <div class="presence-form container flex">
-                            <div class="checkbox flex-item">Absent</div>
-                            <div class="checkbox flex-item">Present</div>
-                            <div class="checkbox flex-item">Unsure</div>
-                        </div>
-                    </div>
-
-                    <div class="presence-main">
                         <form class="presence-form container flex">
                             <div class="flex-item">
                                 <input class="checkbox" type="radio" id="absent" name="presence" value="absent">
@@ -64,8 +56,8 @@
                                 <input class="checkbox flex-item" type="radio" id="unsure" name="presence" value="unsure">
                                 <label for="unsure">unsure</label>
                             </div>
+                            <input type="submit" value="Submit">
                         </form> 
-
                 </section>
                 <div class="detail2-field">
                     <div class="title">Foofoofoofoo</div>
