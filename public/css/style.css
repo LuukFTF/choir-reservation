@@ -660,8 +660,8 @@ table .btn:active {
     background: var(--surface-color2);
     top: 90px;
 
-    margin: 0 10px 10px;
-    padding: 20px 10px 10px;
+    margin: -30px 10px 10px;
+    padding: 50px 10px 10px;
 
     border-radius: 5px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
