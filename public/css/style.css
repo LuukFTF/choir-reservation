@@ -193,7 +193,7 @@ a .btn {
 }
 
 .btn.secondary {
-    background: var(--surface-color);
+    background: var(--surface-color1);
     color: var(--primary-color);
 
     display: inline-block;
@@ -215,6 +215,11 @@ a .btn {
     background: var(--onsurface-color3);
 
     box-shadow: 0 3px 13px rgba(114, 81, 81, 0.2);
+}
+
+.btn.secondary.s2 {
+    background: var(--surface-color2);
+    border: 2px solid var(--surface-color3);
 }
 
 .fab-btn, 
@@ -353,13 +358,21 @@ a .fab-btn {
     justify-content: flex-start;
 }
 
-.topbar .title {
+.topbar .title  {
     color: var(--onsurface-color);
     font-size: 2.8em;
     font-weight: 500;
     margin: 0;
     padding: 0;
 }
+
+.topbar.without-backbtn .title, 
+.topbar.without-backbtn .titlesmall,
+.topbar.without-backbtn .titledesc  {
+    padding-left: 40px;
+}
+
+
 
 .topbar .titlesmall {
     color: var(--onsurface-color);
@@ -667,7 +680,8 @@ table .btn:active {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
-.calendardetails .detail2-field, .calendardetails .detail-field {
+.calendardetails .detail2-field, 
+.calendardetails .detail-field {
     margin: 10px;
 }
 
@@ -766,13 +780,13 @@ table .btn:active {
 }
 
 .presence-form label {
-        color: var(--onsurface-color3);
-    
-        display: block;
-    
-        margin: 0 0 5px 0;
-        font-size: 1.3em;
-        font-variant: small-caps;
+    color: var(--onsurface-color3);
+
+    display: block;
+
+    margin: 0 0 5px 0;
+    font-size: 1.3em;
+    font-variant: small-caps;
 }
 
 /* .presence-form input[type="radio"] {
@@ -780,6 +794,69 @@ table .btn:active {
     position: fixed;
     width: 0;
 } */
+
+/* ## Settings */
+
+.settings {
+    position: relative;
+    top: 90px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 190px;
+}
+
+
+
+.settings-search {
+    margin: 10px 0 0;
+    width: 100%;
+    text-align: center;
+}
+
+.settings-search .field-item {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.settings-search input {
+    width: 100%;
+}
+
+.settings-search label {
+    text-align: left;
+}
+ 
+.settings-mainbutton {
+    margin: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.settings-mainbutton .btn {
+    width: 60%;
+    padding: 12px 20px;
+}
+
+
+.settings-main.container{
+    position: relative;
+    background: var(--surface-color2);
+    width: 100%;
+    margin: 15px 0 0;
+
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.settings-main .btn {
+    width: 80%;
+    text-align: center;
+}
+
+.setting {
+    margin: 5px;
+}
 
 
 /* ## Generaldetails Section */

@@ -7,7 +7,7 @@
     <script src="https://kit.fontawesome.com/0bc22cc72a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/utilities.css">
-    <title>0.1 Login</title>
+    <title>RC - 0.1 Login</title>
 </head>
 
 <body>
