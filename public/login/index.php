@@ -30,19 +30,11 @@
             </div>
             <div class="buttons container flex">
                 <a class="btn secondary flex-item" href="">Signup<a>
-                <form class="flex-item"><input class="btn" type="submit" value="Login"></input></form>
+                <form class="flex-item" action="../main/"><input class="btn" type="submit" value="Login"></input></form>
             </div>
         </section>
 
     </div>
 
-    <section class="bottomnavbar-container">
-        <nav class="bottomnavbar container flex nav">
-            <a href="../../main" class="btn nav-btn btn-home"><br><div class="btn-text">Home</div></a>
-            <a href="../../events" class="btn nav-btn btn-event active"><br><div class="btn-text">Events</div></a>
-            <a class="btn nav-btn btn-inbox"><br><div class="btn-text">Inbox</div></a>
-            <a class="btn nav-btn btn-settings"><br><div class="btn-text">Settings</div></a>
-        </nav>
-    </section>
 </body>
 </html>
