@@ -56,6 +56,7 @@ body {
     color: var(--onsurface-color);
 
     font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 1em;
 }
 
 .container {
@@ -179,6 +180,7 @@ a .btn {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 
     text-decoration: none;
+    font-size: 1em;
 
     cursor: pointer;
 }
@@ -191,11 +193,20 @@ a .btn {
 }
 
 .btn.secondary {
-    background: var(--surface-color3);
-    color: var(--onsurface-color2);
+    background: var(--surface-color);
+    color: var(--primary-color);
 
-    font-size: 1em;
-    padding: 5px 10px;
+    display: inline-block;
+    
+    padding: 10px 30px;
+    border: 2px solid var(--surface-color2);
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+
+    text-decoration: none;
+
+    cursor: pointer;
+
 }
 
 
@@ -485,6 +496,59 @@ table .btn:active {
 
 
 /* # Sections */
+
+/* ## Login */
+
+.login {
+    margin: 20px;
+}
+
+.login .main {
+    background: var(--surface-color1);
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    width: 100%;
+    padding: 10px 15px 20px;
+}
+
+.login .field-item {
+    width: 100%;
+    margin: 5px 0;
+}
+
+.login .field-item input[type="text"] {
+    width: 100%;
+    height: 50px;
+    font-weight: 100;
+    font-size: 1.1em;
+}
+
+.login .title {
+    color: var(--onsurface-color);
+
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+
+
+.login .buttons {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 15px;
+    padding: 0;
+}
+
+
+/* ## Logo */
+
+.logo {
+    margin: 30px 100px 15px;
+    color: var(--primary-color);
+    font-size: 12em;
+    font-weight: 900;
+    text-align: center;
+}
 
 /* ## Calendarlist */
 
