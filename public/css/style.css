@@ -437,7 +437,7 @@ label {
     font-variant: small-caps;
 }
 
-input[type="text"] {
+input[type="text"], input[type="password"] {
     background: var(--surface-color2);
     color: var(--onsurface-color2);
 
@@ -511,12 +511,21 @@ table .btn:active {
     padding: 15px;
 }
 
+.login .main2 {
+    background: var(--surface-color1);
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    width: 100%;
+    padding: 5px 15px 15px;
+    margin: 10px 0 0;
+}
+
 .login .field-item {
     width: 100%;
     margin: 5px 0;
 }
 
-.login .field-item input[type="text"] {
+.login .field-item input[type="text"], .login .field-item input[type="password"] {
     width: 100%;
     height: 50px;
     font-weight: 100;
@@ -539,11 +548,25 @@ table .btn:active {
     padding: 0;
 }
 
+/* ## Signup */
+
+.login.signup .main {
+    margin: -40px 0 0;
+}
+
+.field-item.space {
+    margin: 20px 0 0;
+}
+
+.field-item.space2 {
+    margin: 60px 0 0;
+}
+
 
 /* ## Logo */
 
 .logo {
-    margin: 30px 0 15px;
+    margin: 0;
     color: var(--primary-color);
     font-size: 12em;
     font-weight: 900;

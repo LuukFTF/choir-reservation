@@ -14,23 +14,39 @@
 
     <div class="webcontainer">
         <section class="logo">RC</section>
-        <section class="login">
+        <section class="login signup">
             <div class="main">
-                <div class="title">Login</div>
+                <div class="title">Signup</div>
                 <div class="loginform">
                     <form class="field-item" action="" method="post">
                         <label>username</label>
                         <input type="text" id="username" name="username" value="">
                     </form>
                     <form class="field-item" action="" method="post">
+                        <label>email</label>
+                        <input type="text" id="email" name="email" value="">
+                    </form>
+                    <form class="field-item space" action="" method="post">
                         <label>password</label>
                         <input type="password" id="password" name="password" value="">
                     </form>
+                    <form class="field-item" action="" method="post">
+                        <label>password confirm</label>
+                        <input type="password" id="passwordconfirm" name="passwordconfirm" value="">
+                    </form>
                 </div>
             </div>
+            <div class="main2">
+                <div class="loginform">
+                    <form class="field-item" action="" method="post">
+                        <label>organisation invite code</label>
+                        <input type="text" id="invitecode" name="invitecode" value="">
+                    </form>
+                </div>
+            </div>  
             <div class="buttons container flex">
-                <a class="btn secondary flex-item" href="../signup/">Signup<a>
-                <form class="flex-item" action="../main/"><input class="btn" type="submit" value="Login"></input></form>
+                <a class="btn secondary flex-item" href="../login/">Login<a>
+                <form class="flex-item" action="../main/"><input class="btn" type="submit" value="Signup"></input></form>
             </div>
         </section>
 
