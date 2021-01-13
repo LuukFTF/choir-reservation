@@ -50,8 +50,6 @@
         </div>
     </section>
 
-
-
     <section class="bottomnavbar-container">
         <nav class="bottomnavbar container flex nav">
             <a href="../main" class="btn nav-btn btn-home"><br><div class="btn-text">Home</div></a>
