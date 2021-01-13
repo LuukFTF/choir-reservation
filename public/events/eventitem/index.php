@@ -56,7 +56,7 @@
                                 <input class="checkbox flex-item" type="radio" id="unsure" name="presence" value="unsure">
                                 <label for="unsure">unsure</label>
                             </div>
-                            <input type="submit" value="Submit">
+                            <input class="btn secondary" type="submit" value="Submit"></input>
                         </form> 
                 </section>
                 <div class="detail2-field">
@@ -71,7 +71,7 @@
 
             </section>
 
-            <a class="btn fab-btn"><div class="fab-btn btn-content btn-add"></div></a>
+            <a class="btn fab-btn fab-rightbott"><div class="fab-btn fab-rightbott btn-content btn-add"></div></a>
     </div>
 
 
