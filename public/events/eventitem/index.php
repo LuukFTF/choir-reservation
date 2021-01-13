@@ -38,7 +38,7 @@
                             </div>
                             </div>
                         <div class="presence-timeslot flex-item">
-                            <div class="timeslot-title">Closes</div>
+                            <div class="timeslot-title">closes</div>
                             <div class="timeslot-time">20:00</div>
                         </div>
                     </div>
@@ -49,9 +49,26 @@
                             <div class="checkbox flex-item">Unsure</div>
                         </div>
                     </div>
+
+                    <div class="presence-main">
+                        <form class="presence-form container flex">
+                            <div class="flex-item">
+                                <input class="checkbox" type="radio" id="absent" name="presence" value="absent">
+                                <label class="checkbox-label" for="absent">absent</label>
+                            </div>
+                            <div class="flex-item">
+                                <input class="checkbox flex-item" type="radio" id="present" name="presence" value="present">
+                                <label for="present">present</label>
+                            </div>
+                            <div class="flex-item">
+                                <input class="checkbox flex-item" type="radio" id="unsure" name="presence" value="unsure">
+                                <label for="unsure">unsure</label>
+                            </div>
+                        </form> 
+
                 </section>
                 <div class="detail2-field">
-                    <div class="title">Foo</div>
+                    <div class="title">Foofoofoofoo</div>
                     <div class="text">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
                     </div>

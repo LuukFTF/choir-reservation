@@ -547,6 +547,18 @@ table .btn:active {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
+.calendardetails .detail2-field, .calendardetails .detail-field {
+    margin: 10px;
+}
+
+.calendardetails .title {
+    color: var(--onsurface-color);
+
+    margin: 0.6em 0 0.4em;
+
+    font-size: 1.5em;
+    font-weight: 700;
+}
 
 /* ### Presence */
 
@@ -558,15 +570,58 @@ table .btn:active {
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
+    margin: 0;
+    padding: 0;
 }
 
 .presence-titlesub {
-flex-direction: row;
+    flex-direction: row;
+    margin: 0 10px 0;
+    padding: 0;
+}
+
+.presence .presence-title {
+    color: var(--onsurface-color);
+
+    margin: 0 10px 0 0;
+
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.presence .presence-subtitle {
+    color: var(--onsurface-color3);
+
+    margin: 0 0 0 10px;
+
+    font-size: 1.3em;
+    font-weight: 400;
 }
 
 .presence-timeslot {
+    text-align: center;
+}
+
+.presence .timeslot-title {
+    color: var(--onsurface-color);
+
+    margin: 0 0 -7px;
+
+    font-size: 1em;
+    font-weight: 400;
+
 
 }
+
+.presence .timeslot-time {
+    color: var(--onsurface-color3);
+
+    margin: 0;
+
+    font-size: 1.3em;
+    font-weight: 400;
+}
+
 
 
 .presence-main {
@@ -583,6 +638,26 @@ flex-direction: row;
     flex-grow: 1;
     justify-content: space-evenly;
 }
+
+.presence-form {
+    text-align: center;
+}
+
+.presence-form label {
+        color: var(--onsurface-color3);
+    
+        display: block;
+    
+        margin: 0 0 5px 0;
+        font-size: 1.3em;
+        font-variant: small-caps;
+}
+
+/* .presence-form input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+} */
 
 
 /* ## Generaldetails Section */
