@@ -278,6 +278,10 @@ a .fab-btn {
     font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f274";
 }
 
+.btn-edit::before {
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f044";
+}
+
 
 
 
@@ -437,7 +441,8 @@ label {
     font-variant: small-caps;
 }
 
-input[type="text"], input[type="password"] {
+input[type="text"], 
+input[type="password"] {
     background: var(--surface-color2);
     color: var(--onsurface-color2);
 
@@ -449,7 +454,10 @@ input[type="text"], input[type="password"] {
     font-size: 1em;
 }
 
-input[type="text"]:focus, input[type="text"]:hover {
+input[type="text"]:focus, 
+input[type="text"]:hover, 
+input[type="password"]:focus, 
+input[type="password"]:hover {
     color: var(--onsurface-color);
 
     border:2px solid var(--primary-color);
@@ -712,6 +720,8 @@ table .btn:active {
 
 .presence-timeslot {
     text-align: center;
+    margin: 0 10px 0;
+    padding: 0;
 }
 
 .presence .timeslot-title {

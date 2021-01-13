@@ -87,7 +87,7 @@
             
 
         </section>
-        <a class="btn fab-btn"><div class="fab-btn btn-content btn-add"></div></a>
+        <a class="btn fab-btn fab-rightbott"><div class="fab-btn fab-rightbott btn-content btn-add"></div></a>
     </div>
 
     <section class="bottomnavbar-container">

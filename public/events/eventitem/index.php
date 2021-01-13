@@ -60,9 +60,15 @@
                         </form> 
                 </section>
                 <div class="detail2-field">
-                    <div class="title">Foofoofoofoo</div>
+                    <div class="title">Information</div>
                     <div class="text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+                    </div>
+                </div>
+                <div class="detail2-field">
+                    <div class="title">Homework/Setlist</div>
+                    <div class="text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
                     </div>
                 </div>
             </section>
@@ -71,7 +77,7 @@
 
             </section>
 
-            <a class="btn fab-btn fab-rightbott"><div class="fab-btn fab-rightbott btn-content btn-add"></div></a>
+            <a class="btn fab-btn fab-rightbott"><div class="fab-btn fab-rightbott btn-content btn-edit"></div></a>
     </div>
 
 
