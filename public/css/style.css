@@ -859,22 +859,48 @@ table .btn:active {
 }
 
 
-/* ## Generaldetails Section */
+/* ## Users table */
 
-.generaldetails .item  {
+.users-table {
+    background-color: var(--surface-color1);
+    position: relative;
+    top: 90px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.users {
+    width: 100%;
+    margin: 0 0 10px;
+}
+
+/* ## General Table Details */
+
+.tabledetails {
+    background-color: var(--surface-color1);
+    position: relative;
+    top: 90px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tabledetails .item { 
     margin: 20px 0;
     padding: 0;
 }
 
-
-.generaldetails h4  {
+.tabledetails h4  {
     color: var(--onsurface-color);
 
     margin: 0;
     padding: 0;
 }
 
-.generaldetails p  {
+.tabledetails p  {
     color: var(--onsurface-color2);
 
     padding: 0;
@@ -882,7 +908,6 @@ table .btn:active {
 
     font-variant: small-caps;
 }
-
 
 /* ## Generalcreate Section */
 

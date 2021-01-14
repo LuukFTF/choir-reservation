@@ -34,7 +34,7 @@
         </div>
         <div class="settings-main flex-item container flex ">
             <a class="btn secondary s2 setting flex-item">Organisation</a>
-            <a class="btn secondary s2 setting flex-item">Users</a>
+            <a href="users" class="btn secondary s2 setting flex-item">Users</a>
             <a class="btn secondary s2 setting flex-item">Audit Log</a>
             <a class="btn secondary s2 setting flex-item">Privacy</a>
         </div>
