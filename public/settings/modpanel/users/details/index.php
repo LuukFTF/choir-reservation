@@ -32,7 +32,7 @@ $user = $users[$id];
 
     <section class="topbar-container">
             <div class="topbar details container flex">
-                <a href="../../modpanel/" class="btn btn-back flex-item"></a>
+                <a href="../../users/" class="btn btn-back flex-item"></a>
                 <div class="topbar-main flex-item">
                     <div class="titlesmall">Users</div> 
                     <div class="titledesc">Foo Fighters</div> 
@@ -71,7 +71,6 @@ $user = $users[$id];
         </div>
         <td><a class="btn" href="../edit?id=<?= $id ?>">Edit</a></td>
     </section>
-    <a href="/musiccollection" class="btn">Back</a>
 
 </body>
 </html>
