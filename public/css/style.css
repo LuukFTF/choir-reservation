@@ -211,16 +211,17 @@ input[type="submit"] {
 }
 
 
+.btn.secondary.s2 {
+    background: var(--surface-color2);
+    border: 2px solid var(--surface-color3);
+}
+
 .btn.secondary:hover , 
 .btn.secondary:active {
     background: var(--onsurface-color3);
 
-    box-shadow: 0 3px 13px rgba(114, 81, 81, 0.2);
-}
-
-.btn.secondary.s2 {
-    background: var(--surface-color2);
-    border: 2px solid var(--surface-color3);
+    color: var(--primary-color2);
+    box-shadow: 0 3px 13px rgba(0, 0, 0, 0.2);
 }
 
 .fab-btn, 
