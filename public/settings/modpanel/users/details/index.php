@@ -34,8 +34,8 @@ $user = $users[$id];
             <div class="topbar details container flex">
                 <a href="../../users/" class="btn btn-back flex-item"></a>
                 <div class="topbar-main flex-item">
-                    <div class="titlesmall">Users</div> 
-                    <div class="titledesc">Foo Fighters</div> 
+                    <div class="titlesmall">User Detail</div> 
+                    <div class="titledesc"><?=$user['username']?></div> 
                 </div>
             </div>
     </section>
@@ -65,12 +65,20 @@ $user = $users[$id];
             <h4><?=$user['role']?></h4>
             <p>role</p>
         </div>
-            <div class="item">
+        <div class="item">
             <h4><?=$user['organisation_id']?></h4>
             <p>organisation_id</p>
         </div>
         <td><a class="btn" href="../edit?id=<?= $id ?>">Edit</a></td>
     </section>
 
+    <section class="bottomnavbar-container">
+        <nav class="bottomnavbar container flex nav">
+            <a href="../../../../main" class="btn nav-btn btn-home"><br><div class="btn-text">Home</div></a>
+            <a href="../../../../events" class="btn nav-btn btn-event"><br><div class="btn-text">Events</div></a>
+            <a href="../../../../inbox" class="btn nav-btn btn-inbox"><br><div class="btn-text">Inbox</div></a>
+            <a href="../../../../settings" class="btn nav-btn btn-settings active"><br><div class="btn-text">Settings</div></a>
+        </nav>
+    </section>
 </body>
 </html>

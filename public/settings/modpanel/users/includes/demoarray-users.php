@@ -10,7 +10,7 @@ $users =
         'firstname'         => 'admin',
         'lastname'          => 'admin',
         'role'              => 'sysadmin',
-        'organisation_id'   => '',
+        'organisation_id'   => 'admin',
     ],
     [
         'user_id'           => '1',
@@ -54,12 +54,12 @@ $users =
     ],
     [
         'user_id'           => '5',
-        'email'             => 'chris@example.com',
-        'username'          => 'ChrisS',
+        'email'             => 'danerrr23@example.com',
+        'username'          => 'danerrr',
         'password'          => '123',
-        'firstname'         => 'Chris',
-        'lastname'          => 'Shiflett',
-        'role'              => 'default',
+        'firstname'         => 'Dan',
+        'lastname'          => 'Reynolds',
+        'role'              => 'guest',
         'organisation_id'   => 'foofighters',
     ],
     [

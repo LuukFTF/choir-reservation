@@ -59,7 +59,7 @@ require_once 'includes/demoarray-users.php';
                     <?php $id++; } ?>
                 </tbody>
             </table> 
-        <a href="/create" class="btn">Create</a>
+        <a href="create" class="btn">Create</a>
     </section>
 </div>
 
