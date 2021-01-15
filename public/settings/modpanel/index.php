@@ -34,14 +34,23 @@
         </div>
         <div class="settings-main flex-item container flex ">
             <a class="btn secondary s2 setting flex-item">Organisation</a>
-            <a href="users" class="btn secondary s2 setting flex-item">Users</a>
-            <a class="btn secondary s2 setting flex-item">Audit Log</a>
+            <a href="users" class="btn secondary s2 setting flex-item">Members</a>
+            <a href="users" class="btn secondary s2 setting flex-item">Roles</a>
             <a class="btn secondary s2 setting flex-item">Privacy</a>
         </div>
         <div class="settings-main flex-item container flex ">
             <a class="btn secondary s2 setting flex-item">Notifications</a>
             <a class="btn secondary s2 setting flex-item">Event Items</a>
             <a class="btn secondary s2 setting flex-item">Presence</a>
+        </div>
+        <div class="settings-main flex-item container flex ">
+            <a href="users" class="btn secondary s2 setting flex-item">Users Table</a>
+            <a class="btn secondary s2 setting flex-item">Event Table</a>
+            <a class="btn secondary s2 setting flex-item">Presence Table</a>
+        </div>
+        <div class="settings-main flex-item container flex ">
+            <a class="btn secondary s2 setting flex-item">Audit Log</a>
+            <a class="btn secondary s2 setting flex-item">Invites</a>
         </div>
         <div class="settings-main flex-item container flex ">
             <a class="btn secondary s2 setting flex-item">Security</a>
