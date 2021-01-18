@@ -119,7 +119,15 @@ if (isset($_POST['submit'])) {
         </div>
         <div class="item">
             <label for="role">role</label>
-            <input id="role" type="text" name="role" value="<?= isset($user) ? $role : ''  ?>"/> 
+            <select id="role" name="role" value="<?= isset($user) ? $role : '' ?>">
+                <option value="" selected><?= isset($user) ? $role : '' ?></option> 
+                <option value="sysadmin">Sysadmin</option>
+                <option value="admin">Admin</option>
+                <option value="moderator">Moderator</option>
+                <option value="editor">Editor</option>
+                <option value="defaultuser">Default User</option>
+                <option value="guest">Guest</option>
+            </select>
         </div>
         <div class="item">
             <label for="organisation_id">organisation_id</label>

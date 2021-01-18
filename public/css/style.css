@@ -457,7 +457,8 @@ label {
 }
 
 input[type="text"], 
-input[type="password"] {
+input[type="password"],
+select {
     background: var(--surface-color2);
     color: var(--onsurface-color2);
 
@@ -472,7 +473,8 @@ input[type="password"] {
 input[type="text"]:focus, 
 input[type="text"]:hover, 
 input[type="password"]:focus, 
-input[type="password"]:hover {
+input[type="password"]:hover,
+select:focus, select:focus {
     color: var(--onsurface-color);
 
     border:2px solid var(--primary-color);
