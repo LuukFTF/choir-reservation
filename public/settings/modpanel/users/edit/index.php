@@ -1,25 +1,37 @@
 <?php
 date_default_timezone_set('Europe/Amsterdam');
 
-require_once '../includes/demoarray-users.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/includes/db/db-connect.php';
 
-if(!isset($_GET['id']) || $_GET['id'] == '')
-{
+if(!true) {
+// if(!isset($_GET['id']) || $_GET['id'] == '') {
     header('Location: /settings/modpanel/users');
     exit;
-} else {
-    $id = $_GET['id'];
-    $user = $users[$id];
-
-    $username = $user['username'];
-    $email = $user['email'];
-    $password = $user['password'];
-    $firstname = $user['firstname'];
-    $lastname = $user['lastname'];
-    $role = $user['role'];
-    $organisation_id = $user['organisation_id'];
-
 }
+
+$id = $_GET['id'];
+
+$query = "SELECT * 
+FROM users 
+WHERE user_id = $id
+";
+
+$result = mysqli_query($DB, $query)
+or die('Error in query: '.$query);
+
+$user =  mysqli_fetch_assoc($result);
+
+$user_id = $user['user_id'];
+$username = $user['username'];
+$email = $user['email'];
+$password = $user['password'];
+$firstname = $user['firstname'];
+$lastname = $user['lastname'];
+$vocaltype = $user['vocaltype'];
+$role = $user['role'];
+$datecreated = $user['datecreated'];
+$organisation_id = $user['organisation_id'];
+
     
 if (isset($_POST['submit'])) {
 
@@ -28,7 +40,9 @@ if (isset($_POST['submit'])) {
     $password = $_POST['password'];
     $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
+    isset($vocaltype) ? $vocaltype = $_POST['vocaltype'] : '';
     $role = $_POST['role'];
+    isset($vocaltype) ? $vocaltype = $datecreated = $_POST['datecreated'] : '';
     $organisation_id = $_POST['organisation_id'];
 
     $errors = [];
@@ -44,11 +58,28 @@ if (isset($_POST['submit'])) {
     if($role == '') {
         $errors[] = 'Role is required';
     }
-
-    if(empty($errors))
-    {
-        echo 'Name is: ' . $username;
+    if($organisation_id == '') {
+        $errors[] = 'organisation_id is required';
     }
+
+    if(empty($errors)){
+        $query_edit = "UPDATE users
+        SET firstname = '$firstname' 
+        WHERE user_id = $id
+        ";
+
+        $result2 = mysqli_query($DB, $query_edit)
+        or die('Error: '.$query_edit);
+    }
+
+    if ($result2) {
+        echo 'Updated Successfully!';
+        exit;
+    } else {
+        $errors[] = 'Error: '.mysqli_error($db);
+    }
+    
+    mysqli_close($db);
 }
 
 ?>
@@ -78,54 +109,46 @@ if (isset($_POST['submit'])) {
         </div>
     </section>
 
+<?php var_dump($_POST); ?>
+
     <section class="tabledetails">
+        <form method="post" action="">
         <div class="item">
-            <form action="" method="post">
-                <label for="username">username</label>
-                <input id="username" type="text" name="text" value="<?= isset($user) ? $username : ''  ?>"/> 
-            </form>
+            <label for="username">username</label>
+            <input id="username" type="text" name="username" value="<?= isset($user) ? $username : ''  ?>"/> 
         </div>
         <div class="item">
-            <form action="" method="post">
-                <label for="email">email</label>
-                <input id="email" type="text" name="text" value="<?= isset($user) ? $email : ''  ?>"/> 
-            </form>
+            <label for="email">email</label>
+            <input id="email" type="text" name="email" value="<?= isset($user) ? $email : ''  ?>"/> 
         </div>
         <div class="item">
-            <form action="" method="post">
-                <label for="password">password</label>
-                <input id="password" type="password" name="text" value="<?= isset($user) ? $password : ''  ?>"/> 
-            </form>
+            <label for="password">password</label>
+            <input id="password" type="password" name="password" value="<?= isset($user) ? $password : ''  ?>"/> 
         </div>
         <div class="item">
-            <form action="" method="post">
-                <label for="firstname">firstname</label>
-                <input id="firstname" type="text" name="text" value="<?= isset($user) ? $firstname : ''  ?>"/> 
-            </form>
+            <label for="firstname">firstname</label>
+            <input id="firstname" type="text" name="firstname" value="<?= isset($user) ? $firstname : ''  ?>"/> 
         </div>
         <div class="item">
-            <form action="" method="post">
-                <label for="lastname">lastname</label>
-                <input id="lastname" type="text" name="text" value="<?= isset($user) ? $lastname : ''  ?>"/> 
-            </form>
+            <label for="lastname">lastname</label>
+            <input id="lastname" type="text" name="lastname" value="<?= isset($user) ? $lastname : ''  ?>"/> 
         </div>
         <div class="item">
-            <form action="" method="post">
-                <label for="role">role</label>
-                <input id="role" type="text" name="text" value="<?= isset($user) ? $role : ''  ?>"/> 
-            </form>
+            <label for="vocaltype">vocaltype</label>
+            <input id="vocaltype" type="text" name="role" value="<?= isset($user) ? $role : ''  ?>"/> 
         </div>
         <div class="item">
-            <form action="" method="post">
-                <label for="organisation_id">organisation_id</label>
-                <input id="organisation_id" type="text" name="text" value="<?= isset($user) ? $organisation_id : ''  ?>"/> 
-            </form>
+            <label for="role">role</label>
+            <input id="role" type="text" name="role" value="<?= isset($user) ? $role : ''  ?>"/> 
+        </div>
+        <div class="item">
+            <label for="organisation_id">organisation_id</label>
+            <input id="organisation_id" type="text" name="organisation_id" value="<?= isset($user) ? $organisation_id : ''  ?>"/> 
         </div>
         <div class="item datasubmit-btn">
-            <form action="../details?<?= $id ?>">
-                <input class="btn" type="submit" name="submit" value="Save"/>
-            </form>
+            <input class="btn" method="post" type="submit" name="submit" value="Save"/>
         </div>
+        </form>
     </section>
 </div>
 

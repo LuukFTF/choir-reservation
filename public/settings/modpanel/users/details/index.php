@@ -1,17 +1,25 @@
 <?php
 date_default_timezone_set('Europe/Amsterdam');
 
-require_once '../includes/demoarray-users.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/includes/db/db-connect.php';
 
 // Redirect back if index not in url or value is empty
 if(!isset($_GET['id']) || $_GET['id'] == '')
 {
-    header('Location: index.php');
+    // header('Location:/settings/modpanel/users');
     exit;
 }
 
 $id = $_GET['id'];
-$user = $users[$id];
+
+$query = "SELECT * 
+FROM users WHERE user_id = $id";
+
+
+$result = mysqli_query($DB, $query)
+or die('Error in query: '.$query);
+
+$user =  mysqli_fetch_assoc($result);
 
 ?>
 
@@ -62,8 +70,16 @@ $user = $users[$id];
             <h4><?=$user['lastname']?></h4>
         </div>
         <div class="item">
+            <h4><?=$user['vocaltype']?></h4>
+            <p>vocaltype</p>
+        </div>
+        <div class="item">
             <h4><?=$user['role']?></h4>
             <p>role</p>
+        </div>
+        <div class="item">
+            <h4><?=$user['datecreated']?></h4>
+            <p>datecreated</p>
         </div>
         <div class="item">
             <h4><?=$user['organisation_id']?></h4>

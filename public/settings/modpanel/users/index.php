@@ -1,8 +1,6 @@
 <?php
 date_default_timezone_set('Europe/Amsterdam');
 
-// require_once 'includes/demoarray-users.php';
-
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/db/db-connect.php';
 
 $query = "SELECT * 
@@ -33,8 +31,6 @@ $x = 0;
     <title>RC - 5.2 Users </title>
 </head>
 <body>
-<div class="webcontainer">
-
     <section class="topbar-container">
             <div class="topbar details container flex">
                 <a href="../../modpanel/" class="btn btn-back flex-item"></a>
@@ -49,34 +45,39 @@ $x = 0;
         <table class="users">
                 <thead>
                     <th>#</th>
-                    <th>Email</th>
-                    <th>Username</th>
-                    <th>Password</th>
-                    <th>Firstname</th>
-                    <th>Lastname</th>
-                    <th>Role</th>
-                    <th>Organisation_id</th>
+                    <th>user_id</th>
+                    <th>email</th>
+                    <th>username</th>
+                    <th>password</th>
+                    <th>firstname</th>
+                    <th>lastname</th>
+                    <th>vocaltype</th>
+                    <th>role</th>
+                    <th>datecreated</th>
+                    <th>organisation_id</th>
                     <th></th>
                 </thead>
                 <tbody>
                     <?php foreach ($users as $id => $user) { ?>
                     <tr>
                         <td><?= $id ?></th>
+                        <td><?= $user['user_id'] ?></td>
                         <td><?= $user['email'] ?></td>
                         <td><?= $user['username'] ?></td>
                         <td><?= $user['password'] ?></td>
                         <td><?= $user['firstname'] ?></td>
                         <td><?= $user['lastname'] ?></td>
+                        <td><?= $user['vocaltype'] ?></td>
                         <td><?= $user['role'] ?></td>
+                        <td><?= $user['datecreated'] ?></td>
                         <td><?= $user['organisation_id'] ?></td>
-                        <td><a class="btn" href="details?id=<?= $id ?>">Details</a></td>
+                        <td><a class="btn" href="details?id=<?= $user['user_id'] ?>">Details</a></td>
                     </tr>
                     <?php $id++; } ?>
                 </tbody>
             </table> 
         <a href="create" class="btn">Create</a>
     </section>
-</div>
 
     <section class="bottomnavbar-container">
         <nav class="bottomnavbar container flex nav">
@@ -86,6 +87,5 @@ $x = 0;
             <a href="../../../settings" class="btn nav-btn btn-settings active"><br><div class="btn-text">Settings</div></a>
         </nav>
     </section>
-
 </body>
 </html>

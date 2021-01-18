@@ -57,6 +57,11 @@
             <a class="btn secondary s2 setting flex-item">About</a>
             <a class="btn secondary s2 setting flex-item">Help</a>
         </div>
+        <div class="settings-main flex-item container flex ">
+            <h2>dev tools</h2>
+            <a class="btn secondary s2 setting flex-item">Organisations Table</a>
+            <a class="btn secondary s2 setting flex-item">Session Data Edit</a>
+        </div>
     </section>
 
 
