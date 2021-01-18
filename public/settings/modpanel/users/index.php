@@ -1,10 +1,25 @@
 <?php
 date_default_timezone_set('Europe/Amsterdam');
 
-require_once 'includes/demoarray-users.php';
+// require_once 'includes/demoarray-users.php';
 
+require_once $_SERVER['DOCUMENT_ROOT'].'/includes/db/db-connect.php';
+
+$query = "SELECT * 
+        FROM users";
+
+$result = mysqli_query($DB, $query)
+or die('Error in query: '.$query);
+
+while($row = mysqli_fetch_assoc($result))
+{
+    $users[] = $row;
+}
+
+mysqli_close($DB);
+
+$x = 0;
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
