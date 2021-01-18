@@ -58,10 +58,6 @@ $user =  mysqli_fetch_assoc($result);
             <h4><?=$user['email']?></h4>
         </div>
         <div class="item">
-            <p>password</p>
-            <h4><?=$user['password']?></h4>
-        </div>
-        <div class="item">
             <p>firstname</p>
             <h4><?=$user['firstname']?></h4>
         </div>
@@ -76,6 +72,10 @@ $user =  mysqli_fetch_assoc($result);
         <div class="item">
             <h4><?=$user['role']?></h4>
             <p>role</p>
+        </div>
+        <div class="item">
+            <h4><?=$user['dateupdated']?></h4>
+            <p>dateupdated</p>
         </div>
         <div class="item">
             <h4><?=$user['datecreated']?></h4>

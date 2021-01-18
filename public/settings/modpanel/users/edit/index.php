@@ -3,8 +3,7 @@ date_default_timezone_set('Europe/Amsterdam');
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/db/db-connect.php';
 
-if(!true) {
-// if(!isset($_GET['id']) || $_GET['id'] == '') {
+if(!isset($_GET['id']) || $_GET['id'] == '') {
     header('Location: /settings/modpanel/users');
     exit;
 }
@@ -29,40 +28,22 @@ $firstname = $user['firstname'];
 $lastname = $user['lastname'];
 $vocaltype = $user['vocaltype'];
 $role = $user['role'];
+$dateupdated = $user['dateupdated'];
 $datecreated = $user['datecreated'];
 $organisation_id = $user['organisation_id'];
 
     
 if (isset($_POST['submit'])) {
+    isset($username) ?       $username          = $_POST['username']         : $errors[] = 'Username is required';
+    isset($email) ?         $email              = $_POST['email']           : $errors[] = 'Email is required';
+    isset($password) ?      $password           = $_POST['password']        : $errors[] = 'Password is required';
+    isset($firstname) ?     $firstname          = $_POST['firstname']       : '';
+    isset($lastname) ?      $lastname           = $_POST['lastname']        : '';
+    isset($vocaltype) ?     $vocaltype          = $_POST['vocaltype']       : '';
+    isset($role) ?          $role               = $_POST['role']            : $errors[] = 'Role is required';
+    isset($organisation_id) ? $organisation_id  = $_POST['organisation_id'] : $errors[] = 'organisation_id is required';
 
-    $username = $_POST['username'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $firstname = $_POST['firstname'];
-    $lastname = $_POST['lastname'];
-    isset($vocaltype) ? $vocaltype = $_POST['vocaltype'] : '';
-    $role = $_POST['role'];
-    isset($vocaltype) ? $vocaltype = $datecreated = $_POST['datecreated'] : '';
-    $organisation_id = $_POST['organisation_id'];
-
-    $errors = [];
-    if($username == '') {
-        $errors[] = 'Username is required';
-    }
-    if($email == '') {
-        $errors[] = 'Email is required';
-    }
-    if($password == '') {
-        $errors[] = 'Password is required';
-    }
-    if($role == '') {
-        $errors[] = 'Role is required';
-    }
-    if($organisation_id == '') {
-        $errors[] = 'organisation_id is required';
-    }
-
-    if(empty($errors)){
+    if(empty($errors)) {
         $query_edit = "UPDATE users
         SET firstname = '$firstname' 
         WHERE user_id = $id
@@ -73,13 +54,13 @@ if (isset($_POST['submit'])) {
     }
 
     if ($result2) {
-        echo 'Updated Successfully!';
+        header('Location: /settings/modpanel/users');
         exit;
     } else {
-        $errors[] = 'Error: '.mysqli_error($db);
+        $errors[] = 'Error: '.mysqli_error($DB);
     }
     
-    mysqli_close($db);
+    mysqli_close($DB);
 }
 
 ?>
@@ -109,7 +90,7 @@ if (isset($_POST['submit'])) {
         </div>
     </section>
 
-<?php var_dump($_POST); ?>
+<span class="error"><?php isset($errors) ? var_dump($errors) : false ?></span>
 
     <section class="tabledetails">
         <form method="post" action="">
@@ -135,7 +116,7 @@ if (isset($_POST['submit'])) {
         </div>
         <div class="item">
             <label for="vocaltype">vocaltype</label>
-            <input id="vocaltype" type="text" name="role" value="<?= isset($user) ? $role : ''  ?>"/> 
+            <input id="vocaltype" type="text" name="role" value="<?= isset($user) ? $vocaltype : ''  ?>"/> 
         </div>
         <div class="item">
             <label for="role">role</label>

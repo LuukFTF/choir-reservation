@@ -48,12 +48,11 @@ $x = 0;
                     <th>user_id</th>
                     <th>email</th>
                     <th>username</th>
-                    <th>password</th>
                     <th>firstname</th>
                     <th>lastname</th>
                     <th>vocaltype</th>
                     <th>role</th>
-                    <th>datecreated</th>
+                    <th>dateupdated</th>
                     <th>organisation_id</th>
                     <th></th>
                 </thead>
@@ -64,12 +63,11 @@ $x = 0;
                         <td><?= $user['user_id'] ?></td>
                         <td><?= $user['email'] ?></td>
                         <td><?= $user['username'] ?></td>
-                        <td><?= $user['password'] ?></td>
                         <td><?= $user['firstname'] ?></td>
                         <td><?= $user['lastname'] ?></td>
                         <td><?= $user['vocaltype'] ?></td>
                         <td><?= $user['role'] ?></td>
-                        <td><?= $user['datecreated'] ?></td>
+                        <td><?= $user['dateupdated'] ?></td>
                         <td><?= $user['organisation_id'] ?></td>
                         <td><a class="btn" href="details?id=<?= $user['user_id'] ?>">Details</a></td>
                     </tr>
