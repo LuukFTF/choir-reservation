@@ -21,6 +21,7 @@
                 </div>
             </div>
     </section>
+    <span class="error"><?php isset($errors) ? var_dump($errors) : false ?></span>
 
     <section class="settings container flex">
         <div class="settings-search flex-item">
@@ -68,10 +69,10 @@
 
     <section class="bottomnavbar-container">
         <nav class="bottomnavbar container flex nav">
-            <a href="../main" class="btn nav-btn btn-home"><br><div class="btn-text">Home</div></a>
-            <a href="../events" class="btn nav-btn btn-event"><br><div class="btn-text">Events</div></a>
-            <a href="../inbox" class="btn nav-btn btn-inbox"><br><div class="btn-text">Inbox</div></a>
-            <a href="../settings" class="btn nav-btn btn-settings active"><br><div class="btn-text">Settings</div></a>
+            <a href="../../main" class="btn nav-btn btn-home"><br><div class="btn-text">Home</div></a>
+            <a href="../../events" class="btn nav-btn btn-event"><br><div class="btn-text">Events</div></a>
+            <a href="../../inbox" class="btn nav-btn btn-inbox"><br><div class="btn-text">Inbox</div></a>
+            <a href="../../settings" class="btn nav-btn btn-settings active"><br><div class="btn-text">Settings</div></a>
         </nav>
     </section>
 </body>

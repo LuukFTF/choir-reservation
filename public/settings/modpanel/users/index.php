@@ -40,6 +40,7 @@ $x = 0;
                 </div>
             </div>
     </section>
+    <span class="error"><?php isset($errors) ? var_dump($errors) : false ?></span>
 
     <section class="users-table">
         <table class="users">

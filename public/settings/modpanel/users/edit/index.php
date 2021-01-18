@@ -34,14 +34,14 @@ $organisation_id = $user['organisation_id'];
 
     
 if (isset($_POST['submit'])) {
-    isset($username) ?       $username          = $_POST['username']         : $errors[] = 'Username is required';
-    isset($email) ?         $email              = $_POST['email']           : $errors[] = 'Email is required';
-    isset($password) ?      $password           = $_POST['password']        : $errors[] = 'Password is required';
-    isset($firstname) ?     $firstname          = $_POST['firstname']       : '';
-    isset($lastname) ?      $lastname           = $_POST['lastname']        : '';
-    isset($vocaltype) ?     $vocaltype          = $_POST['vocaltype']       : '';
-    isset($role) ?          $role               = $_POST['role']            : $errors[] = 'Role is required';
-    isset($organisation_id) ? $organisation_id  = $_POST['organisation_id'] : $errors[] = 'organisation_id is required';
+    isset($username) ?      $username           = htmlspecialchars($_POST['username'], ENT_QUOTES)        : $errors[] = 'Username is required';
+    isset($email) ?         $email              = htmlspecialchars($_POST['email'], ENT_QUOTES)           : $errors[] = 'Email is required';
+    isset($password) ?      $password           = htmlspecialchars($_POST['password'], ENT_QUOTES)        : $errors[] = 'Password is required';
+    isset($firstname) ?     $firstname          = htmlspecialchars($_POST['firstname'], ENT_QUOTES)       : '';
+    isset($lastname) ?      $lastname           = htmlspecialchars($_POST['lastname'], ENT_QUOTES)        : '';
+    isset($vocaltype) ?     $vocaltype          = htmlspecialchars($_POST['vocaltype'], ENT_QUOTES)       : '';
+    isset($role) ?          $role               = htmlspecialchars($_POST['role'], ENT_QUOTES)            : $errors[] = 'Role is required';
+    isset($organisation_id) ? $organisation_id  = htmlspecialchars($_POST['organisation_id'], ENT_QUOTES) : $errors[] = 'organisation_id is required';
 
     if(empty($errors)) {
         $query_edit = "UPDATE users
@@ -89,8 +89,7 @@ if (isset($_POST['submit'])) {
             </div>
         </div>
     </section>
-
-<span class="error"><?php isset($errors) ? var_dump($errors) : false ?></span>
+    <span class="error"><?php isset($errors) ? var_dump($errors) : false ?></span>
 
     <section class="tabledetails">
         <form method="post" action="">
