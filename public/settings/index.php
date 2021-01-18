@@ -48,6 +48,9 @@
             <a class="btn secondary s2 setting flex-item">About</a>
             <a class="btn secondary s2 setting flex-item">Help</a>
         </div>
+        <div class="settings-main flex-item container flex ">
+            <a href="../login/logout.php" class="btn secondary s2 setting flex-item">Logout</a>
+        </div>
     </section>
 
     <section class="bottomnavbar-container">
