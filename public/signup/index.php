@@ -87,11 +87,6 @@ if (isset($_POST['submit'])) {
     </section>
     <span class="error"><?php isset($errors) ? var_dump($errors) : false ?></span>
 
-    <span class="error"><?php var_dump($errors) ?></span>
-    <span class="error"><?php var_dump($_POST) ?></span>
-    <span class="error"><?php var_dump($result2) ?></span>
-    <span class="error"><?php var_dump($query_create) ?></span>
-
 </div>
 
 </body>
