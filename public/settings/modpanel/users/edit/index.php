@@ -3,6 +3,8 @@ date_default_timezone_set('Europe/Amsterdam');
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/db/db-connect.php';
 
+$current_datetime = date("Y-m-d H:i:s");
+
 if(!isset($_GET['id']) || $_GET['id'] == '') {
     header('Location: /settings/modpanel/users');
     exit;
@@ -45,7 +47,7 @@ if (isset($_POST['submit'])) {
 
     if(empty($errors)) {
         $query_edit = "UPDATE users
-        SET firstname = '$firstname' 
+        SET dateupdated = '$current_datetime', username = '$username', email = '$email', password = '$password', firstname = '$firstname', lastname = '$lastname', vocaltype = '$vocaltype', role = '$role', organisation_id = $organisation_id
         WHERE user_id = $id
         ";
 
@@ -93,49 +95,49 @@ if (isset($_POST['submit'])) {
 
     <section class="tabledetails">
         <form method="post" action="">
-        <div class="item">
-            <label for="username">username</label>
-            <input id="username" type="text" name="username" value="<?= isset($user) ? $username : ''  ?>"/> 
-        </div>
-        <div class="item">
-            <label for="email">email</label>
-            <input id="email" type="text" name="email" value="<?= isset($user) ? $email : ''  ?>"/> 
-        </div>
-        <div class="item">
-            <label for="password">password</label>
-            <input id="password" type="password" name="password" value="<?= isset($user) ? $password : ''  ?>"/> 
-        </div>
-        <div class="item">
-            <label for="firstname">firstname</label>
-            <input id="firstname" type="text" name="firstname" value="<?= isset($user) ? $firstname : ''  ?>"/> 
-        </div>
-        <div class="item">
-            <label for="lastname">lastname</label>
-            <input id="lastname" type="text" name="lastname" value="<?= isset($user) ? $lastname : ''  ?>"/> 
-        </div>
-        <div class="item">
-            <label for="vocaltype">vocaltype</label>
-            <input id="vocaltype" type="text" name="role" value="<?= isset($user) ? $vocaltype : ''  ?>"/> 
-        </div>
-        <div class="item">
-            <label for="role">role</label>
-            <select id="role" name="role" value="<?= isset($user) ? $role : '' ?>">
-                <option value="" selected><?= isset($user) ? $role : '' ?></option> 
-                <option value="sysadmin">Sysadmin</option>
-                <option value="admin">Admin</option>
-                <option value="moderator">Moderator</option>
-                <option value="editor">Editor</option>
-                <option value="defaultuser">Default User</option>
-                <option value="guest">Guest</option>
-            </select>
-        </div>
-        <div class="item">
-            <label for="organisation_id">organisation_id</label>
-            <input id="organisation_id" type="text" name="organisation_id" value="<?= isset($user) ? $organisation_id : ''  ?>"/> 
-        </div>
-        <div class="item datasubmit-btn">
-            <input class="btn" method="post" type="submit" name="submit" value="Save"/>
-        </div>
+            <div class="item">
+                <label for="username">username</label>
+                <input id="username" type="text" name="username" value="<?= isset($user) ? $username : ''  ?>"/> 
+            </div>
+            <div class="item">
+                <label for="email">email</label>
+                <input id="email" type="text" name="email" value="<?= isset($user) ? $email : ''  ?>"/> 
+            </div>
+            <div class="item">
+                <label for="password">password</label>
+                <input id="password" type="password" name="password" value="<?= isset($user) ? $password : ''  ?>"/> 
+            </div>
+            <div class="item">
+                <label for="firstname">firstname</label>
+                <input id="firstname" type="text" name="firstname" value="<?= isset($user) ? $firstname : ''  ?>"/> 
+            </div>
+            <div class="item">
+                <label for="lastname">lastname</label>
+                <input id="lastname" type="text" name="lastname" value="<?= isset($user) ? $lastname : ''  ?>"/> 
+            </div>
+            <div class="item">
+                <label for="vocaltype">vocaltype</label>
+                <input id="vocaltype" type="text" name="vocaltype" value="<?= isset($user) ? $vocaltype : ''  ?>"/> 
+            </div>
+            <div class="item">
+                <label for="role">role</label>
+                <select id="role" name="role" value="<?= isset($user) ? $role : '' ?>">
+                    <option value="<?= isset($user) ? $role : '' ?>" selected><?= isset($user) ? $role : '' ?></option> 
+                    <option value="sysadmin">Sysadmin</option>
+                    <option value="admin">Admin</option>
+                    <option value="moderator">Moderator</option>
+                    <option value="editor">Editor</option>
+                    <option value="defaultuser">Default User</option>
+                    <option value="guest">Guest</option>
+                </select>
+            </div>
+            <div class="item">
+                <label for="organisation_id">organisation_id</label>
+                <input id="organisation_id" type="text" name="organisation_id" value="<?= isset($user) ? $organisation_id : ''  ?>"/> 
+            </div>
+            <div class="item datasubmit-btn">
+                <input class="btn" method="post" type="submit" name="submit" value="Save"/>
+            </div>
         </form>
     </section>
 </div>
