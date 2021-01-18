@@ -24,7 +24,7 @@ $users =
     ],
     [
         'user_id'           => '2',
-        'email'             => 'jeffrey19@example.com',
+        'email'             => 'jeffrey79@example.com',
         'username'          => 'Jeffrey',
         'password'          => '123',
         'firstname'         => 'Jeffrey',
@@ -84,8 +84,8 @@ $users =
     ],
     [
         'user_id'           => '7',
-        'email'             => 'natemp@example.com',
-        'username'          => 'Natem',
+        'email'             => 'thawk@example.com',
+        'username'          => 'THawk',
         'password'          => '123',
         'firstname'         => 'Taylor',
         'lastname'          => 'Hawkins',
