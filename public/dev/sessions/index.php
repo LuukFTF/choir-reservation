@@ -14,7 +14,7 @@ $username = $logindata['username'];
 
 if (isset($_POST['submit'])) {
     isset($_POST['user_id']) ?          $user_id            = htmlspecialchars($_POST['user_id'], ENT_QUOTES)               : '';
-    isset($_POST['organisation_id']) ?  $organisation_id    = htmlspecialchars($_POST['organisation_id'], ENT_QUOTES)      : '';
+    isset($_POST['organisation_id']) ?  $organisation_id    = htmlspecialchars($_POST['organisation_id'], ENT_QUOTES)       : '';
     isset($_POST['role']) ?             $role               = htmlspecialchars($_POST['role'], ENT_QUOTES)                  : '';
     isset($_POST['username']) ?         $username           = htmlspecialchars($_POST['username'], ENT_QUOTES)              : '';
 

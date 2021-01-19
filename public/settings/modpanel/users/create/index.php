@@ -16,9 +16,11 @@ if (isset($_POST['submit'])) {
     isset($_POST['organisation_id'])    ? $organisation_id      = htmlspecialchars($_POST['organisation_id'], ENT_QUOTES) : $errors[] = 'organisation_id is required';
 
     if(empty($errors)) {
+        $password_hashed = password_hash($password, PASSWORD_DEFAULT);
+
         $query_create = "INSERT INTO users
                 (dateupdated,           username,       email,      password,       firstname,      lastname,       vocaltype,      role,       organisation_id)
-        VALUES  ('$current_datetime',   '$username',    '$email',   '$password',    '$firstname',   '$lastname',    '$vocaltype',   '$role',    $organisation_id)";
+        VALUES  ('$current_datetime',   '$username',    '$email',   '$password_hashed',    '$firstname',   '$lastname',    '$vocaltype',   '$role',    $organisation_id)";
 
         $result2 = mysqli_query($DB, $query_create)
         or die('Error: '.$query_create);

@@ -46,8 +46,10 @@ if (isset($_POST['submit'])) {
     isset($_POST['organisation_id']) ? $organisation_id  = htmlspecialchars($_POST['organisation_id'], ENT_QUOTES) : $errors[] = 'organisation_id is required';
 
     if(empty($errors)) {
+        $password_hashed = password_hash($password, PASSWORD_DEFAULT);
+
         $query_edit = "UPDATE users
-        SET dateupdated = '$current_datetime', username = '$username', email = '$email', password = '$password', firstname = '$firstname', lastname = '$lastname', vocaltype = '$vocaltype', role = '$role', organisation_id = $organisation_id
+        SET dateupdated = '$current_datetime', username = '$username', email = '$email', password = '$password_hashed', firstname = '$firstname', lastname = '$lastname', vocaltype = '$vocaltype', role = '$role', organisation_id = $organisation_id
         WHERE user_id = $id
         ";
 
@@ -101,8 +103,12 @@ if (isset($_POST['submit'])) {
                 <input id="email" type="text" name="email" value="<?= isset($user) ? $email : ''  ?>"/> 
             </div>
             <div class="item">
-                <label for="password">password</label>
-                <input id="password" type="password" name="password" value="<?= isset($user) ? $password : ''  ?>"/> 
+                <label for="password">password reset</label>
+                <input id="password" type="password" name="password" value=""/> 
+            </div>
+            <div class="item">
+                <label>password confirm</label>
+                <input type="password" id="passwordconfirm" name="passwordconfirm" value="">
             </div>
             <div class="item">
                 <label for="firstname">firstname</label>

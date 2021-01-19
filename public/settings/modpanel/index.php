@@ -1,3 +1,25 @@
+<?php
+date_default_timezone_set('Europe/Amsterdam');
+
+session_start();
+
+require_once $_SERVER['DOCUMENT_ROOT'].'/includes/db/db-connect.php';
+
+$logindata = $_SESSION['logindata'];
+
+$user_id = $logindata['user_id'];
+$organisation_id = $logindata['organisation_id'];
+$role = $logindata['role'];
+$username = $logindata['username'];
+
+if ($role !== 'mod' && $role !== 'admin' && $role !== 'sysadmin') {
+    header('Location:/settings/');
+}
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

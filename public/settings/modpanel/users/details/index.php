@@ -6,7 +6,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/db/db-connect.php';
 // Redirect back if index not in url or value is empty
 if(!isset($_GET['id']) || $_GET['id'] == '')
 {
-    // header('Location:/settings/modpanel/users');
+    header('Location:/settings/modpanel/users');
     exit;
 }
 
