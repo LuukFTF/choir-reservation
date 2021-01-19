@@ -6,14 +6,14 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/db/db-connect.php';
 $current_datetime = date("Y-m-d H:i:s");
 
 if (isset($_POST['submit'])) {
-    isset($_POST['username']) ?      $username           = htmlspecialchars($_POST['username'], ENT_QUOTES)        : $errors[] = 'Username is required';
-    isset($_POST['email']) ?         $email              = htmlspecialchars($_POST['email'], ENT_QUOTES)           : $errors[] = 'Email is required';
-    isset($_POST['password']) ?      $password           = htmlspecialchars($_POST['password'], ENT_QUOTES)        : $errors[] = 'Password is required';
-    isset($_POST['firstname']) ?     $firstname          = htmlspecialchars($_POST['firstname'], ENT_QUOTES)       : '';
-    isset($_POST['lastname']) ?      $lastname           = htmlspecialchars($_POST['lastname'], ENT_QUOTES)        : '';
-    isset($_POST['vocaltype']) ?     $vocaltype          = htmlspecialchars($_POST['vocaltype'], ENT_QUOTES)       : '';
-    isset($_POST['role']) ?          $role               = htmlspecialchars($_POST['role'], ENT_QUOTES)            : $errors[] = 'Role is required';
-    isset($_POST['organisation_id']) ? $organisation_id  = htmlspecialchars($_POST['organisation_id'], ENT_QUOTES) : $errors[] = 'organisation_id is required';
+    isset($_POST['username'])           ? $username             = htmlspecialchars($_POST['username'], ENT_QUOTES)        : $errors[] = 'Username is required';
+    isset($_POST['email'])              ? $email                = htmlspecialchars($_POST['email'], ENT_QUOTES)           : $errors[] = 'Email is required';
+    isset($_POST['password'])           ? $password             = htmlspecialchars($_POST['password'], ENT_QUOTES)        : $errors[] = 'Password is required';
+    isset($_POST['firstname'])          ? $firstname            = htmlspecialchars($_POST['firstname'], ENT_QUOTES)       : '';
+    isset($_POST['lastname'])           ? $lastname             = htmlspecialchars($_POST['lastname'], ENT_QUOTES)        : '';
+    isset($_POST['vocaltype'])          ? $vocaltype            = htmlspecialchars($_POST['vocaltype'], ENT_QUOTES)       : '';
+    isset($_POST['role'])               ? $role                 = htmlspecialchars($_POST['role'], ENT_QUOTES)            : $errors[] = 'Role is required';
+    isset($_POST['organisation_id'])    ? $organisation_id      = htmlspecialchars($_POST['organisation_id'], ENT_QUOTES) : $errors[] = 'organisation_id is required';
 
     if(empty($errors)) {
         $query_create = "INSERT INTO users

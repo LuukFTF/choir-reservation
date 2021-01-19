@@ -48,6 +48,7 @@ if (isset($_POST['submit'])) {
 <div class="webcontainer">
     
     <section class="logo">RC</section>
+    
     <section class="login signup">
     <form method="post" action="">
         <div class="main">
@@ -60,11 +61,11 @@ if (isset($_POST['submit'])) {
                 <div class="field-item">
                     <label>email</label>
                     <input type="text" id="email" name="email" value="<?= isset($_POST['email']) ? $_POST['email'] : '' ?>">
-                    </div>
+                </div>
                 <div class="field-item space">
                     <label>password</label>
                     <input type="password" id="password" name="password" value="<?= isset($_POST['password']) ? $_POST['password'] : '' ?>">
-                    </div>
+                </div>
                 <div class="field-item">
                     <label>password confirm</label>
                     <input type="password" id="passwordconfirm" name="passwordconfirm" value="">
