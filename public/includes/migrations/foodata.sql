@@ -10,7 +10,7 @@ VALUES
 	('foo-user@example.com', 'foo-user', '$2y$10$uURow.HOfhHwbU10zlnQ3eswTUXkOZ7jjtwnbmdvCJ91/FMWKSnBC', 'foo-user', 'foo-user', 'defaultuser', 3),
 	('foo-mod@example.com', 'foo-mod', '$2y$10$uURow.HOfhHwbU10zlnQ3eswTUXkOZ7jjtwnbmdvCJ91/FMWKSnBC', 'foo-mod', 'foo-mod', 'moderator', 3),
 	('foo-editor@example.com', 'foo-editor', '$2y$10$uURow.HOfhHwbU10zlnQ3eswTUXkOZ7jjtwnbmdvCJ91/FMWKSnBC', 'foo-editor', 'foo-editor', 'editor', 3),
-	('foo-guest@example.com', 'foo-guest', '$2y$10$uURow.HOfhHwbU10zlnQ3eswTUXkOZ7jjtwnbmdvCJ91/FMWKSnBC', 'foo-guest', 'foo-guest', 'guest', 3),
+	('foo-guest@example.com', 'foo-guest', '$2y$10$uURow.HOfhHwbU10zlnQ3eswTUXkOZ7jjtwnbmdvCJ91/FMWKSnBC', 'foo-guest', 'foo-guest', 'guest', 3);
 
 INSERT INTO users (email, username, password, firstname, lastname, role, organisation_id)
 VALUES

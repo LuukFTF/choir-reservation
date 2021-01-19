@@ -82,6 +82,7 @@ if ($role !== 'mod' && $role !== 'admin' && $role !== 'sysadmin') {
         <div class="settings-main flex-item container flex ">
             <h2>dev tools</h2>
             <a href="/dev/organisations/" class="btn secondary s2 setting flex-item">Organisations Table</a>
+            <a href="users" class="btn secondary s2 setting flex-item">Users DB Table</a>
             <a href="/dev/sessions/" class="btn secondary s2 setting flex-item">Session Data Edit</a>
         </div>
     </section>
