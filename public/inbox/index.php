@@ -10,9 +10,9 @@
     <title>RC - 3. Inbox</title>
 </head>
 <body>
-<div class="webcontainer">
 
-<section class="topbar-container">
+
+    <section class="topbar-container">
             <div class="topbar details container flex">
                 <a href="../../inbox" class="btn btn-back flex-item"></a>
                 <div class="topbar-main flex-item">
@@ -20,11 +20,11 @@
                 </div>
             </div>
     </section>
+    
+    <div class="webcontainer">
+    </div>
 
-
-
-
-        <section class="bottomnavbar-container">
+    <section class="bottomnavbar-container">
         <nav class="bottomnavbar container flex nav">
             <a href="../main" class="btn nav-btn btn-home"><br><div class="btn-text">Home</div></a>
             <a href="../events" class="btn nav-btn btn-event"><br><div class="btn-text">Events</div></a>

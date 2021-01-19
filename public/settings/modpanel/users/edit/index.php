@@ -79,9 +79,6 @@ if (isset($_POST['submit'])) {
     <title>RC - 5.2.2 <?=$user['username']?> - User Edit</title>
 </head>
 <body>
-<div class="webcontainer">
-
-
     <section class="topbar-container">
         <div class="topbar details container flex">
             <a href="../../users/details?id=<?= $id ?>" class="btn btn-back flex-item"></a>
@@ -92,6 +89,7 @@ if (isset($_POST['submit'])) {
         </div>
     </section>
 
+    <div class="webcontainer">
     <section class="tabledetails">
         <form method="post" action="">
             <div class="item">
@@ -144,12 +142,10 @@ if (isset($_POST['submit'])) {
             </div>   
         </form>
     </section>
-</div>
+    </div>
+    <span class="error"><?php isset($errors) ? var_dump($errors) : false ?></span>
 
-<span class="error"><?php isset($errors) ? var_dump($errors) : false ?></span>
-
-
-<section class="bottomnavbar-container">
+    <section class="bottomnavbar-container">
         <nav class="bottomnavbar container flex nav">
             <a href="../../../../main" class="btn nav-btn btn-home"><br><div class="btn-text">Home</div></a>
             <a href="../../../../events" class="btn nav-btn btn-event"><br><div class="btn-text">Events</div></a>

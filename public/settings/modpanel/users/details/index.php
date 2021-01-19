@@ -36,8 +36,6 @@ $user =  mysqli_fetch_assoc($result);
     <title>RC - 5.2.1 <?=$user['username']?> - User Detail</title>
 </head>
 <body>
-<div class="webcontainer">
-
     <section class="topbar-container">
             <div class="topbar details container flex">
                 <a href="../../users/" class="btn btn-back flex-item"></a>
@@ -49,6 +47,7 @@ $user =  mysqli_fetch_assoc($result);
     </section>
     <span class="error"><?php isset($errors) ? var_dump($errors) : false ?></span>
 
+    <div class="webcontainer">
     <section class="tabledetails">
         <div class="item">
             <h3><?=$user['username']?></h3>
@@ -88,6 +87,7 @@ $user =  mysqli_fetch_assoc($result);
         </div>
         <a class="btn" href="../edit?id=<?= $id ?>">Edit</a>
     </section>
+    </div>
 
     <section class="bottomnavbar-container">
         <nav class="bottomnavbar container flex nav">

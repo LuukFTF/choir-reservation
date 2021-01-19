@@ -21,7 +21,7 @@ if (isset($_POST['submit'])) {
         VALUES  ('$current_datetime',   '$username',    '$email',   '$password',    '$firstname',   '$lastname',    '$vocaltype',   '$role',    $organisation_id)";
 
         $result2 = mysqli_query($DB, $query_create)
-        or die('Error: '.$query_edit);
+        or die('Error: '.$query_create);
     }
 
     if ($result2) {
@@ -47,19 +47,18 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-<div class="webcontainer">
-
     <section class="topbar-container">
         <div class="topbar details container flex">
             <a href="../../users" class="btn btn-back flex-item"></a>
             <div class="topbar-main flex-item">
-                <div class="titlesmall">User Edit</div> 
+                <div class="titlesmall">User Create</div> 
                 <div class="titledesc"><?= isset($user) ? $username : ''  ?></div> 
             </div>
         </div>
     </section>
-    <span class="error"><?php isset($errors) ? var_dump($errors) : false ?></span>
 
+
+    <div class="webcontainer">
     <section class="tabledetails">
     <form method="post" action="">
         <div class="item">
@@ -107,7 +106,8 @@ if (isset($_POST['submit'])) {
         </div>
     </form>
     </section>
-</div>
+    </div>
+    <span class="error"><?php isset($errors) ? var_dump($errors) : false ?></span>
 
 <section class="bottomnavbar-container">
         <nav class="bottomnavbar container flex nav">

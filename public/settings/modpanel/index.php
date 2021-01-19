@@ -10,8 +10,6 @@
     <title>RC - 4. Settings</title>
 </head>
 <body>
-<div class="webcontainer">
-
     <section class="topbar-container">
             <div class="topbar details container flex">
                 <a href="../../settings/" class="btn btn-back flex-item"></a>
@@ -23,6 +21,7 @@
     </section>
     <span class="error"><?php isset($errors) ? var_dump($errors) : false ?></span>
 
+    <div class="webcontainer">
     <section class="settings container flex">
         <div class="settings-search flex-item">
             <form class="field-item" action="" method="post">
@@ -64,7 +63,7 @@
             <a href="/dev/sessions/" class="btn secondary s2 setting flex-item">Session Data Edit</a>
         </div>
     </section>
-
+    </div>
 
 
     <section class="bottomnavbar-container">

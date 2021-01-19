@@ -10,8 +10,6 @@
     <title>RC - 4. Settings</title>
 </head>
 <body>
-<div class="webcontainer">
-
     <section class="topbar-container">
             <div class="topbar without-backbtn details container flex">
                 <!-- <a href="../../settings" class="btn btn-back flex-item"></a> -->
@@ -21,7 +19,8 @@
                 </div>
             </div>
     </section>
-
+    
+    <div class="webcontainer">
     <section class="settings container flex">
         <div class="settings-search flex-item">
             <form class="field-item" action="" method="post">
@@ -52,6 +51,7 @@
             <a href="../login/logout.php" class="btn secondary s2 setting flex-item">Logout</a>
         </div>
     </section>
+    </div>
 
     <section class="bottomnavbar-container">
         <nav class="bottomnavbar container flex nav">
