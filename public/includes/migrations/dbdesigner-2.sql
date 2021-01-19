@@ -1,96 +1,3 @@
--- # Drop
-
-ALTER TABLE `users` DROP FOREIGN KEY `users_fk0`;
-
-ALTER TABLE `users` DROP FOREIGN KEY `users_fk1`;
-
-ALTER TABLE `users` DROP FOREIGN KEY `users_fk2`;
-
-ALTER TABLE `organizations` DROP FOREIGN KEY `organizations_fk0`;
-
-ALTER TABLE `organizations` DROP FOREIGN KEY `organizations_fk1`;
-
-ALTER TABLE `eventitems` DROP FOREIGN KEY `eventitems_fk0`;
-
-ALTER TABLE `eventitems` DROP FOREIGN KEY `eventitems_fk1`;
-
-ALTER TABLE `eventitems` DROP FOREIGN KEY `eventitems_fk2`;
-
-ALTER TABLE `eventitems` DROP FOREIGN KEY `eventitems_fk3`;
-
-ALTER TABLE `subeventitems` DROP FOREIGN KEY `subeventitems_fk0`;
-
-ALTER TABLE `subeventitems` DROP FOREIGN KEY `subeventitems_fk1`;
-
-ALTER TABLE `subeventitems` DROP FOREIGN KEY `subeventitems_fk2`;
-
-ALTER TABLE `subeventitems` DROP FOREIGN KEY `subeventitems_fk3`;
-
-ALTER TABLE `presencechecks_users` DROP FOREIGN KEY `presencechecks_users_fk0`;
-
-ALTER TABLE `presencechecks_users` DROP FOREIGN KEY `presencechecks_users_fk1`;
-
-ALTER TABLE `presencechecks_users` DROP FOREIGN KEY `presencechecks_users_fk2`;
-
-ALTER TABLE `presencechecks_users` DROP FOREIGN KEY `presencechecks_users_fk3`;
-
-ALTER TABLE `presencechecks_users` DROP FOREIGN KEY `presencechecks_users_fk4`;
-
-ALTER TABLE `presencechecks` DROP FOREIGN KEY `presencechecks_fk0`;
-
-ALTER TABLE `presencechecks` DROP FOREIGN KEY `presencechecks_fk1`;
-
-ALTER TABLE `presencechecks` DROP FOREIGN KEY `presencechecks_fk2`;
-
-ALTER TABLE `presencechecks` DROP FOREIGN KEY `presencechecks_fk3`;
-
-ALTER TABLE `broadcasts` DROP FOREIGN KEY `broadcasts_fk0`;
-
-ALTER TABLE `broadcasts` DROP FOREIGN KEY `broadcasts_fk1`;
-
-ALTER TABLE `broadcasts` DROP FOREIGN KEY `broadcasts_fk2`;
-
-ALTER TABLE `broadcasts` DROP FOREIGN KEY `broadcasts_fk3`;
-
-ALTER TABLE `broadcasts` DROP FOREIGN KEY `broadcasts_fk4`;
-
-ALTER TABLE `usersettings` DROP FOREIGN KEY `usersettings_fk0`;
-
-ALTER TABLE `usersettings` DROP FOREIGN KEY `usersettings_fk1`;
-
-ALTER TABLE `usersettings` DROP FOREIGN KEY `usersettings_fk2`;
-
-ALTER TABLE `organisationsettings` DROP FOREIGN KEY `organisationsettings_fk0`;
-
-ALTER TABLE `organisationsettings` DROP FOREIGN KEY `organisationsettings_fk1`;
-
-ALTER TABLE `organisationsettings` DROP FOREIGN KEY `organisationsettings_fk2`;
-
-DROP TABLE IF EXISTS `users`;
-
-DROP TABLE IF EXISTS `organizations`;
-
-DROP TABLE IF EXISTS `eventitems`;
-
-DROP TABLE IF EXISTS `subeventitems`;
-
-DROP TABLE IF EXISTS `presencechecks_users`;
-
-DROP TABLE IF EXISTS `presencechecks`;
-
-DROP TABLE IF EXISTS `broadcasts`;
-
-DROP TABLE IF EXISTS `usersettings`;
-
-DROP TABLE IF EXISTS `organisationsettings`;
-
-
--- # Create database
-
-CREATE DATABASE choirreservation-1;
-
--- # Create Tables
-
 CREATE TABLE `users` (
 	`user_id` int NOT NULL AUTO_INCREMENT,
 	`email` varchar(50) NOT NULL UNIQUE,
@@ -248,9 +155,6 @@ CREATE TABLE `organisationsettings` (
 	PRIMARY KEY (`organisationsetting_id`)
 );
 
--- # Contraints
-
-
 ALTER TABLE `users` ADD CONSTRAINT `users_fk0` FOREIGN KEY (`createdby`) REFERENCES `users`(`user_id`);
 
 ALTER TABLE `users` ADD CONSTRAINT `users_fk1` FOREIGN KEY (`updatedby`) REFERENCES `users`(`user_id`);
@@ -317,20 +221,3 @@ ALTER TABLE `organisationsettings` ADD CONSTRAINT `organisationsettings_fk1` FOR
 
 ALTER TABLE `organisationsettings` ADD CONSTRAINT `organisationsettings_fk2` FOREIGN KEY (`updatedby`) REFERENCES `users`(`user_id`);
 
-
--- # Default Data
-
-INSERT INTO users (email, username, password, firstname, lastname, role, organisation_id)
-VALUES
-	('admin@example.com', 'admin', '$2y$10$RvAdkWzTztrAarOp7pIwWu1Ug0EcBgCXTF7i/feudp.PEGakupqSC', 'admin', 'admin', 'sysadmin', 1),
-    ('user@gmail.com', 'useradmin', '$2y$10$L8y.SG8oMTz/EPbTGLfybOVNhpDX/LSCP8uY18xidNN/lIdmlU98K', 'user', 'lastname', 'admin', 2),
-    ('user@gmail.com', 'user', '$2y$10$L8y.SG8oMTz/EPbTGLfybOVNhpDX/LSCP8uY18xidNN/lIdmlU98K', 'user', 'lastname', 'default', 2),
-
-
-INSERT INTO organisations (name, organisation_id)
-VALUES ('admin', 1), ('default', 2)
-
-
--- # Foodata
-
--- see foodata.sql
