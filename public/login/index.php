@@ -15,12 +15,12 @@ if (isset($_POST['submit'])) {
     isset($_POST['password'])   ? $password     = $_POST['password']                                       : $errors[] = 'Password is required';
     
     if(empty($errors)) {
-        $query_login = "SELECT *
+        $query_login = "SELECT user_id, password, username, organisation_id, role
         FROM users
         WHERE username = '$username'";
 
         $result = mysqli_query($DB, $query_login)
-        or die($errors[] = 'Error: '.mysqli_error($DB));
+        or $errors[] = 'Error: '.mysqli_error($DB);
     
         $user = mysqli_fetch_assoc($result);
     }
@@ -55,15 +55,6 @@ if (isset($_POST['submit'])) {
 
 <body>
 <div class="webcontainer">
-
-<?php var_dump($errors) ?>
-<?php var_dump($_SESSION['logindata']) ?>
-<?php var_dump($_SESSION) ?>
-<?php var_dump($_POST) ?>
-<?php var_dump($result) ?>
-<?php var_dump($user) ?>
-
-
     <section class="logo">RC</section>
 
     <section class="login">

@@ -1,9 +1,16 @@
 <?php
+session_start();
+
 date_default_timezone_set('Europe/Amsterdam');
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/db/db-connect.php';
 
 $current_datetime = date("Y-m-d H:i:s");
+
+if (isset($_SESSION['logindata'])) {
+    header("Location: /main/");
+    exit;
+}
 
 if (isset($_POST['submit'])) {
     isset($_POST['username']) ?      $username           = htmlspecialchars($_POST['username'], ENT_QUOTES)         : $errors[] = 'Username is required';
@@ -11,25 +18,27 @@ if (isset($_POST['submit'])) {
     isset($_POST['password']) ?      $password           = htmlspecialchars($_POST['password'], ENT_QUOTES)         : $errors[] = 'Password is required';
     isset($_POST['invitecode']) ?    $organisation_id    = htmlspecialchars($_POST['invitecode'], ENT_QUOTES)       : $errors[] = 'organisation_id is required';
 
-    if(true) {
+    if(empty($errors)) {
+        $password_hashed = password_hash($password, PASSWORD_DEFAULT);
+        
         $query_create = "INSERT INTO users
-                (dateupdated,           username,       email,      password,      organisation_id, firstname)
-        VALUES  ('$current_datetime',   '$username',    '$email',   '$password',   $organisation_id, '$username')";
+                (dateupdated,           username,       email,      password,             organisation_id, firstname)
+        VALUES  ('$current_datetime',   '$username',    '$email',   '$password_hashed',   $organisation_id, '$username')";
 
         $result2 = mysqli_query($DB, $query_create)
-        or die('Error: '.$query_create);
+        or $errors[] = 'Error: '.mysqli_error($DB);
     } else {
         $errors[] = 'cant start database transaction';
     }
 
     if ($result2) {
-        header('Location: /main/');
+        header('Location: /login/');
         exit;
     } else {
         $errors[] = 'Error: '.mysqli_error($DB);
     }
     
-    // mysqli_close($DB);
+    mysqli_close($DB);
 }
 ?>
 
