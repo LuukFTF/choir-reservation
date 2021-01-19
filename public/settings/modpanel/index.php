@@ -60,8 +60,8 @@
         </div>
         <div class="settings-main flex-item container flex ">
             <h2>dev tools</h2>
-            <a class="btn secondary s2 setting flex-item">Organisations Table</a>
-            <a class="btn secondary s2 setting flex-item">Session Data Edit</a>
+            <a href="/public/dev/organisations/" class="btn secondary s2 setting flex-item">Organisations Table</a>
+            <a href="/public/dev/sessions/" class="btn secondary s2 setting flex-item">Session Data Edit</a>
         </div>
     </section>
 

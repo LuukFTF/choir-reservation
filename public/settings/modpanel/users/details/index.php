@@ -86,7 +86,7 @@ $user =  mysqli_fetch_assoc($result);
             <h4><?=$user['organisation_id']?></h4>
             <p>organisation_id</p>
         </div>
-        <td><a class="btn" href="../edit?id=<?= $id ?>">Edit</a></td>
+        <a class="btn" href="../edit?id=<?= $id ?>">Edit</a>
     </section>
 
     <section class="bottomnavbar-container">

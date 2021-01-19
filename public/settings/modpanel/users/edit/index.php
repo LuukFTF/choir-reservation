@@ -4,7 +4,6 @@ date_default_timezone_set('Europe/Amsterdam');
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/db/db-connect.php';
 
 $current_datetime = date("Y-m-d H:i:s");
-$errors[] = '';
 
 if(!isset($_GET['id']) || $_GET['id'] == '') {
     header('Location: /settings/modpanel/users');
@@ -92,7 +91,6 @@ if (isset($_POST['submit'])) {
             </div>
         </div>
     </section>
-    <span class="error"><?php isset($errors) ? var_dump($errors) : false ?></span>
 
     <section class="tabledetails">
         <form method="post" action="">
@@ -136,12 +134,20 @@ if (isset($_POST['submit'])) {
                 <label for="organisation_id">organisation_id</label>
                 <input id="organisation_id" type="text" name="organisation_id" value="<?= isset($user) ? $organisation_id : ''  ?>"/> 
             </div>
-            <div class="item datasubmit-btn">
-                <input class="btn" method="post" type="submit" name="submit" value="Save"/>
-            </div>
+            <div class="container flex flexrow btnrow">
+                <div class="flex-item item datasubmit-btn">
+                    <input class="btn" method="post" type="submit" name="submit" value="Save"/>
+                </div>
+                <div class="flex-item item datasubmit-btn">
+                    <a class="btn" href="../delete?id=<?= $id ?>">Delete</a>
+                </div>
+            </div>   
         </form>
     </section>
 </div>
+
+<span class="error"><?php isset($errors) ? var_dump($errors) : false ?></span>
+
 
 <section class="bottomnavbar-container">
         <nav class="bottomnavbar container flex nav">
