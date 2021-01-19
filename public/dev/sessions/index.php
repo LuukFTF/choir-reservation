@@ -3,6 +3,8 @@ date_default_timezone_set('Europe/Amsterdam');
 
 session_start();
 
+require_once $_SERVER['DOCUMENT_ROOT'].'/includes/db/db-connect.php';
+
 $logindata = $_SESSION['logindata'];
 
 $user_id = $logindata['user_id'];
@@ -25,8 +27,17 @@ if (isset($_POST['submit'])) {
         ];
     }
 }
-?>
 
+$query_sessiondata = "SELECT user_id, organisation_id, role, username
+FROM users
+WHERE user_id = '$user_id'";
+
+$result = mysqli_query($DB, $query_sessiondata)
+or $errors[] = 'Error: '.mysqli_error($DB);
+
+$usersessiondata = mysqli_fetch_assoc($result);
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -40,7 +51,7 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-<div class="webcontainer">
+    <div class="webcontainer">
     <section class="tabledetails">
             <form method="post" action="">
                 <div class="item">
@@ -76,6 +87,12 @@ if (isset($_POST['submit'])) {
                 </div>   
             </form>
     </section>
-</div>
-
- <?php var_dump($_SESSION['logindata']) ?>
+    <span class="rawdata">
+        <h2>Session</h2>
+        <?php var_dump($_SESSION['logindata']) ?>
+        <h2>Database</h2>
+        <?php var_dump($usersessiondata) ?>
+    </span></br></br>   
+    </div>
+</body>
+</html>
