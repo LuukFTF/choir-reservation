@@ -4,7 +4,7 @@ date_default_timezone_set('Europe/Amsterdam');
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/db/db-connect.php';
 
 $query = "SELECT * 
-        FROM eventitems";
+FROM eventitems";
 
 $result = mysqli_query($DB, $query)
 or die('Error in query: '.$query);
@@ -17,7 +17,6 @@ while($row = mysqli_fetch_assoc($result))
 mysqli_close($DB);
 
 $x = 0;
-
 ?>
 
 <!DOCTYPE html>
@@ -44,8 +43,9 @@ $x = 0;
         <div class="callist container flex">
         <?php foreach ($eventitems as $id => $eventitem) { 
             $startdatetime = $eventitem['startdatetime'];
-            $starttime = date("H:i", strtotime("$startdatetime"));
             $enddatetime = $eventitem['enddatetime'];
+            
+            $starttime = date("H:i", strtotime("$startdatetime"));
             $endtime = date("H:i", strtotime("$enddatetime"));
             $day = date("D", strtotime("$startdatetime"));
             $daynumber = date("j", strtotime("$startdatetime"));?>

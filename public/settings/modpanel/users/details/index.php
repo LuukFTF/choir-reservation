@@ -13,14 +13,14 @@ if(!isset($_GET['id']) || $_GET['id'] == '')
 $id = $_GET['id'];
 
 $query = "SELECT * 
-FROM users WHERE user_id = $id";
+FROM users 
+WHERE user_id = $id";
 
 
 $result = mysqli_query($DB, $query)
 or die('Error in query: '.$query);
 
 $user =  mysqli_fetch_assoc($result);
-
 ?>
 
 

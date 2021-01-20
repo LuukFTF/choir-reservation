@@ -1,3 +1,40 @@
+<?php
+
+date_default_timezone_set('Europe/Amsterdam');
+
+require_once $_SERVER['DOCUMENT_ROOT'].'/includes/db/db-connect.php';
+
+// Redirect back if index not in url or value is empty
+if(!isset($_GET['id']) || $_GET['id'] == '')
+{
+    header('Location:/events/');
+    exit;
+}
+
+$id = $_GET['id'];
+
+$query = "SELECT * 
+FROM eventitems 
+WHERE eventitem_id = $id";
+
+$result = mysqli_query($DB, $query)
+or die('Error in query: '.$query);
+
+$eventitem =  mysqli_fetch_assoc($result);
+
+$startdatetime = $eventitem['startdatetime'];
+$enddatetime = $eventitem['enddatetime'];
+
+$starttime = date("H:i", strtotime("$startdatetime"));
+$endtime = date("H:i", strtotime("$enddatetime"));
+$dayfull = date("l", strtotime("$startdatetime"));
+
+$datetext = date("F j, Y", strtotime("$startdatetime"))
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,8 +52,8 @@
         <div class="topbar details container flex">
             <a href="../../events" class="btn btn-back flex-item"></a>
             <div class="topbar-main flex-item">
-                <div class="titlesmall">Item 1 - Lorem ipsum</div> 
-                <div class="titledesc">1 January</div>
+                <div class="titlesmall"><?= $eventitem['title'];?></div> 
+                <div class="titledesc"><?= $dayfull ?> ⋅ <?= $datetext;?> ⋅ <?= $starttime ?> - <?= $endtime ?></div>
             </div>
             <a class="btn right btn-options flex-item"></a>
         </div>
@@ -24,9 +61,7 @@
     
     <div class="webcontainer">
     <section class="calendardetails">
-        <div class="detail-field">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
-        </div>
+        <div class="detail-field"><?= $eventitem['description0'];?></div>
         <section class="presence container flex">
             <div class="presence-info flex-item container flex">
                 <div class="presence-titlesub flex-item container flex"> 
@@ -60,16 +95,12 @@
                 </form> 
         </section>
         <div class="detail2-field">
-            <div class="title">Homework/Setlist</div>
-            <div class="text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
-            </div>
+            <div class="title"><?= $eventitem['subtitle1'];?></div>
+            <div class="text"><?= $eventitem['description1'];?></div>
         </div>
         <div class="detail2-field">
-            <div class="title">Information</div>
-            <div class="text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat                     Lorem  dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat                     Lorem  dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
-            </div>
+            <div class="title"><?= $eventitem['subtitle2'];?></div>
+            <div class="text"><?= $eventitem['description2'];?></div>
         </div>
     </section>
 
