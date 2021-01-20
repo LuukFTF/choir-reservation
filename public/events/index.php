@@ -1,3 +1,25 @@
+<?php
+date_default_timezone_set('Europe/Amsterdam');
+
+require_once $_SERVER['DOCUMENT_ROOT'].'/includes/db/db-connect.php';
+
+$query = "SELECT * 
+        FROM eventitems";
+
+$result = mysqli_query($DB, $query)
+or die('Error in query: '.$query);
+
+while($row = mysqli_fetch_assoc($result))
+{
+    $eventitems[] = $row;
+}
+
+mysqli_close($DB);
+
+$x = 0;
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,67 +42,25 @@
     <div class="webcontainer">
     <section class="calendar-list callist-default">
         <div class="callist container flex">
-            <div class="calllist-item flex-item container flex">
-                <div class="callist-left flex-item">
-                    <div class="day">thu</div>
-                    <div class="dayofmonth">1</div>
-                </div>
-                <a class="callist-right item" href="eventitem">
-                    <div class="title">Item 1</div>
-                    <div class="time">19:00 - 23:15</div>
-                </a>
-            </div>
+        <?php foreach ($eventitems as $id => $eventitem) { 
+            $startdatetime = $eventitem['startdatetime'];
+            $starttime = date("H:i", strtotime("$startdatetime"));
+            $enddatetime = $eventitem['enddatetime'];
+            $endtime = date("H:i", strtotime("$enddatetime"));
+            $day = date("D", strtotime("$startdatetime"));
+            $daynumber = date("j", strtotime("$startdatetime"));?>
 
             <div class="calllist-item flex-item container flex">
                 <div class="callist-left flex-item">
-                    <div class="day">fri</div>
-                    <div class="dayofmonth">8</div>
+                    <div class="day"><?= $day ?></div>
+                    <div class="dayofmonth"><?= $daynumber ?></div>
                 </div>
-                <div class="callist-right item">
-                    <div class="title">Item 2</div>
-                    <div class="time">13:00 - 18:00</div>
-                </div>
+                <a class="callist-right item" href="eventitem?id=<?= $eventitem['eventitem_id'] ?>">
+                    <div class="title"><?= $eventitem['title'];?></div>
+                    <div class="time"><?= $starttime ?> - <?= $endtime ?></div>
+                </a>
             </div>
-            <div class="calllist-item flex-item container flex">
-                <div class="callist-left flex-item">
-                    <div class="day">tue</div>
-                    <div class="dayofmonth">12</div>
-                </div>
-                <div class="callist-right item">
-                    <div class="title">Item 3</div>
-                    <div class="time">13:00 - 18:00</div>
-                </div>
-            </div>
-            <div class="calllist-item flex-item container flex">
-                <div class="callist-left flex-item">
-                    <div class="day">wed</div>
-                    <div class="dayofmonth">13</div>
-                </div>
-                <div class="callist-right item">
-                    <div class="title">Item 4</div>
-                    <div class="time">13:00 - 18:00</div>
-                </div>
-            </div>
-            <div class="calllist-item flex-item container flex">
-                <div class="callist-left flex-item">
-                    <div class="day">sat</div>
-                    <div class="dayofmonth">16</div>
-                </div>
-                <div class="callist-right item">
-                    <div class="title">Item 5</div>
-                    <div class="time">19:00 - 23:15</div>
-                </div>
-            </div>
-            <div class="calllist-item flex-item container flex">
-                <div class="callist-left flex-item">
-                    <div class="day">sat</div>
-                    <div class="dayofmonth">16</div>
-                </div>
-                <div class="callist-right item">
-                    <div class="title">Item 5</div>
-                    <div class="time">19:00 - 23:15</div>
-                </div>
-            </div>
+        <?php $id++; } ?>
         </div>
     </section>
     <a class="btn fab-btn fab-rightbott"><div class="fab-btn fab-rightbott btn-content btn-add"></div></a>
