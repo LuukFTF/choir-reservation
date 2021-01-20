@@ -326,7 +326,6 @@ VALUES
     ('useradmin@gmail.com', 'useradmin', '$2y$10$L8y.SG8oMTz/EPbTGLfybOVNhpDX/LSCP8uY18xidNN/lIdmlU98K', 'user', 'lastname', 'admin', 2),
     ('user@gmail.com', 'user', '$2y$10$L8y.SG8oMTz/EPbTGLfybOVNhpDX/LSCP8uY18xidNN/lIdmlU98K', 'user', 'lastname', 'default', 2),
 
-
 INSERT INTO organisations (name, organisation_id)
 VALUES ('admin', 1), ('default', 2)
 
