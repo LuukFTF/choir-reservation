@@ -99,3 +99,19 @@ VALUES
 	'Homework', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat ',
 	'Information', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Lorem dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Lorem dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
 	'2');
+
+-- ## Presencechecks
+
+INSERT INTO presencechecks (eventitem_id, organisation_id, maxamount, enddatetime)
+VALUES
+						(1, 2, 50, '2021-02-05 19:00:00'),
+						(2, 2, 60, '2021-02-08 13:00:00'),
+						(3, 2, 50, '2021-02-12 12:00:00'),
+						(4, 2, 60, '2021-02-13 15:15:00'),
+						(5, 2, 50, '2021-02-16 19:00:00'),
+						(6, 2, 60, '2021-02-25 19:45:00'),
+						(7, 2, 50, '2021-02-26 19:45:00'),
+						(8, 2, 60, '2021-02-28 20:00:00'),
+						(9, 2, 50, '2021-03-10 20:00:00'),
+						(10, 2, 60, '2021-03-30 20:00:00'),
+						(11, 2, 50, '2021-04-15 20:00:00');
