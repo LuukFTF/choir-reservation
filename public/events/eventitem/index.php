@@ -13,6 +13,8 @@ if(!isset($_GET['id']) || $_GET['id'] == '')
 
 $id = $_GET['id'];
 
+
+
 $query = "SELECT * 
 FROM eventitems 
 WHERE eventitem_id = $id";
@@ -21,6 +23,15 @@ $result = mysqli_query($DB, $query)
 or die('Error in query: '.$query);
 
 $eventitem =  mysqli_fetch_assoc($result);
+
+$query_pcs = "SELECT * 
+FROM presencechecks  
+WHERE eventitem_id = $id";
+
+
+
+
+
 
 $startdatetime = $eventitem['startdatetime'];
 $enddatetime = $eventitem['enddatetime'];
